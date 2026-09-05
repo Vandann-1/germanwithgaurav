@@ -1,69 +1,155 @@
-import Image from "next/image";
+import React from "react";
+import { Metadata } from "next";
+import { siteConfig } from "@/data/siteConfig";
+import { faqsData } from "@/data/faqData";
+import { Hero } from "@/components/Hero";
+import { LearningProblem } from "@/components/LearningProblem";
+import { LearningGoals } from "@/components/LearningGoals";
+import { AboutGauravSection } from "@/components/AboutGauravSection";
+import { Stats } from "@/components/Stats";
+import { CourseGrid } from "@/components/CourseGrid";
+import { TeachingMethod } from "@/components/TeachingMethod";
+import { EducatorVideo } from "@/components/EducatorVideo";
+import { LatestBlogSection } from "@/components/LatestBlogSection";
+import { FAQAccordion } from "@/components/FAQAccordion";
+import { FinalCTA } from "@/components/FinalCTA";
+import { JsonLd } from "@/components/JsonLd";
+import Link from "next/link";
+import { ArrowRight, HelpCircle } from "lucide-react";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "German With Gaurav | Learn German with Confidence. Speak German in Real Life.",
+  description:
+    "Structured online German language courses (A1, A2, B1) for students, engineers, healthcare professionals, and Germany aspirants. Small 5–7 student batches led by Gaurav Raghuvanshi with 19+ years of expertise.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
+export default function HomePage() {
+  // Structured Data Schema for Homepage
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://germanwithgaurav.com/#website",
+        url: "https://germanwithgaurav.com",
+        name: "German With Gaurav",
+        description: "Learn German Online with 19+ Years of Teaching Expertise",
+        publisher: {
+          "@id": "https://germanwithgaurav.com/#organization",
+        },
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://germanwithgaurav.com/#organization",
+        name: "German With Gaurav",
+        url: "https://germanwithgaurav.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://germanwithgaurav.com/wp-content/uploads/2024/04/germanwithgaurav-logo.png",
+        },
+        founder: {
+          "@id": "https://germanwithgaurav.com/#person",
+        },
+        telephone: siteConfig.contact.phone,
+        email: siteConfig.contact.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.contact.address.street,
+          addressLocality: siteConfig.contact.address.city,
+          addressRegion: siteConfig.contact.address.state,
+          postalCode: siteConfig.contact.address.postalCode,
+          addressCountry: siteConfig.contact.address.country,
+        },
+        sameAs: [
+          siteConfig.social.instagram,
+          siteConfig.social.youtube,
+          siteConfig.social.linkedin,
+        ],
+      },
+      {
+        "@type": "Person",
+        "@id": "https://germanwithgaurav.com/#person",
+        name: "Gaurav Raghuvanshi",
+        jobTitle: "Founder & Lead German Language Instructor",
+        worksFor: {
+          "@id": "https://germanwithgaurav.com/#organization",
+        },
+        description: siteConfig.founder.bio,
+        url: "https://germanwithgaurav.com/about",
+      },
+    ],
+  };
+
+  // Select 12 questions from the original website for Homepage FAQ section
+  const homepageFaqs = faqsData.slice(0, 12);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <JsonLd data={structuredData} />
+
+      {/* 1. Hero */}
+      <Hero />
+
+      {/* 2. Learning problem */}
+      <LearningProblem />
+
+      {/* 3. Learning goals */}
+      <LearningGoals />
+
+      {/* 4. About Gaurav */}
+      <AboutGauravSection />
+
+      {/* 5. Statistics */}
+      <Stats variant="dark" />
+
+      {/* 6. Courses */}
+      <CourseGrid />
+
+      {/* 7. Teaching method */}
+      <TeachingMethod />
+
+      {/* 8. Educator/video section */}
+      <EducatorVideo />
+
+      {/* 10. Latest blog posts */}
+      <LatestBlogSection />
+
+      {/* 11. FAQ Section */}
+      <section className="py-16 sm:py-24 bg-[#08175e] text-white border-t border-slate-900" aria-labelledby="home-faq-heading">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-300 bg-white/10 border border-white/20 px-3.5 py-1 rounded-full inline-block">
+              GOT QUESTIONS?
+            </span>
+            <h2 id="home-faq-heading" className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base text-slate-300">
+              Clear, direct answers to common questions about course duration, class sizes, study materials, and Goethe examinations.
+            </p>
+          </div>
+
+          <FAQAccordion faqs={homepageFaqs} headingLevel="h3" />
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/faq"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#08175e] font-bold text-sm hover:bg-amber-400 hover:text-slate-950 transition-all shadow-lg"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <HelpCircle className="w-4 h-4" />
+              <span>View All Frequently Asked Questions</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* 12. Final CTA */}
+      <FinalCTA />
+    </>
   );
 }
