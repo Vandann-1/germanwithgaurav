@@ -75,6 +75,111 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/course",
+        destination: "/courses",
+        permanent: true,
+      },
+      {
+        source: "/course/",
+        destination: "/courses",
+        permanent: true,
+      },
+      {
+        source: "/course/a1-german",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a1-german/",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a2-german",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a2-german/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/b1-german",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/b1-german/",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a1",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a1/",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a2",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/a2/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/b1",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/b1/",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a1",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a1/",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a2",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a2/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-b1",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/german-b1/",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/course/:path*",
+        destination: "/courses/:path*",
+        permanent: true,
+      },
+      {
         source: "/courses/a1",
         destination: "/courses/a1-german",
         permanent: true,
