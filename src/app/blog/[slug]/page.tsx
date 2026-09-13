@@ -72,6 +72,151 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+function parseInlineMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(
+      /\[(.*?)\]\((.*?)\)/g,
+      '<a href="$2" class="text-[#08175e] font-semibold underline underline-offset-2 hover:text-amber-700 transition-colors">$1</a>'
+    )
+    .replace(
+      /`([^`]+)`/g,
+      '<code class="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-xs font-mono font-medium">$1</code>'
+    );
+}
+
+function parseMarkdownToHtml(
+  content: string,
+  tableOfContents: Array<{ id: string; title: string }>
+): string {
+  const blocks = content.split("\n\n");
+
+  return blocks
+    .map((rawBlock) => {
+      const block = rawBlock.trim();
+      if (!block) return "";
+
+      // Headings: H2
+      if (block.startsWith("## ")) {
+        const headingText = block.replace(/^##\s+/, "").trim();
+        const tocMatch = tableOfContents.find(
+          (t) =>
+            t.title.toLowerCase() === headingText.toLowerCase() ||
+            headingText.toLowerCase().includes(t.title.toLowerCase()) ||
+            t.title.toLowerCase().includes(headingText.toLowerCase())
+        );
+        const id = tocMatch ? tocMatch.id : headingText.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        return `<h2 id="${id}" class="text-2xl sm:text-3xl font-black text-slate-900 mt-12 mb-5 scroll-mt-24 border-b border-slate-100 pb-3">${parseInlineMarkdown(
+          headingText
+        )}</h2>`;
+      }
+
+      // Headings: H3
+      if (block.startsWith("### ")) {
+        const h3Text = block.replace(/^###\s+/, "").trim();
+        return `<h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-8 mb-3">${parseInlineMarkdown(
+          h3Text
+        )}</h3>`;
+      }
+
+      // Blockquotes / Callout notes
+      if (block.startsWith("> ")) {
+        const quoteLines = block
+          .split("\n")
+          .map((line) => line.replace(/^>\s?/, "").trim())
+          .filter(Boolean);
+        return `<blockquote class="border-l-4 border-amber-500 bg-amber-50/60 pl-5 py-3.5 pr-4 rounded-r-2xl my-6 text-slate-800 font-medium italic leading-relaxed shadow-2xs">${quoteLines
+          .map((l) => parseInlineMarkdown(l))
+          .join("<br />")}</blockquote>`;
+      }
+
+      // Markdown Tables
+      if (block.startsWith("|") && block.includes("---")) {
+        const lines = block
+          .split("\n")
+          .map((l) => l.trim())
+          .filter(Boolean);
+
+        if (lines.length >= 2) {
+          const parseRow = (line: string) => {
+            const cleanLine = line.replace(/^\|/, "").replace(/\|$/, "");
+            return cleanLine.split("|").map((cell) => cell.trim());
+          };
+
+          const headerCells = parseRow(lines[0]);
+          const bodyLines = lines.slice(2);
+
+          return `
+            <div class="overflow-x-auto my-8 border border-slate-200 rounded-2xl shadow-2xs">
+              <table class="w-full text-left border-collapse text-sm">
+                <thead class="bg-slate-100 text-slate-900 border-b border-slate-200 font-bold">
+                  <tr>
+                    ${headerCells
+                      .map(
+                        (cell) =>
+                          `<th class="py-3.5 px-4 font-bold text-slate-900 border-r border-slate-200 last:border-r-0">${parseInlineMarkdown(
+                            cell
+                          )}</th>`
+                      )
+                      .join("")}
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white">
+                  ${bodyLines
+                    .map((rowLine, rIdx) => {
+                      const cells = parseRow(rowLine);
+                      return `
+                        <tr class="${
+                          rIdx % 2 === 1 ? "bg-slate-50/60" : "bg-white"
+                        } hover:bg-amber-50/30 transition-colors">
+                          ${cells
+                            .map(
+                              (cell) =>
+                                `<td class="py-3 px-4 text-slate-700 border-r border-slate-100 last:border-r-0 leading-relaxed">${parseInlineMarkdown(
+                                  cell
+                                )}</td>`
+                            )
+                            .join("")}
+                        </tr>
+                      `;
+                    })
+                    .join("")}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+      }
+
+      // Unordered lists
+      if (block.startsWith("* ") || block.startsWith("- ")) {
+        const items = block
+          .split(/\n[\*\-]\s+/)
+          .map((item) => item.replace(/^[\*\-]\s+/, "").trim())
+          .filter(Boolean);
+        return `<ul class="space-y-2.5 my-5 list-disc pl-6 text-slate-700 leading-relaxed">${items
+          .map((i) => `<li>${parseInlineMarkdown(i)}</li>`)
+          .join("")}</ul>`;
+      }
+
+      // Ordered lists
+      if (/^\d+\.\s+/.test(block)) {
+        const items = block
+          .split(/\n\d+\.\s+/)
+          .map((item) => item.replace(/^\d+\.\s+/, "").trim())
+          .filter(Boolean);
+        return `<ol class="space-y-2.5 my-5 list-decimal pl-6 text-slate-700 leading-relaxed">${items
+          .map((i) => `<li>${parseInlineMarkdown(i)}</li>`)
+          .join("")}</ol>`;
+      }
+
+      // Normal Paragraphs
+      return `<p class="text-slate-700 leading-relaxed mb-5">${parseInlineMarkdown(block)}</p>`;
+    })
+    .join("");
+}
+
 export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = blogArticles.find((a) => a.slug === slug);
@@ -80,15 +225,28 @@ export default async function BlogArticlePage({ params }: PageProps) {
     notFound();
   }
 
-  // Schema.org Article JSON-LD
-  const articleJsonLd = {
-    "@context": "https://schema.org",
+  // Schema.org Unified Knowledge Graph JSON-LD
+  const canonicalUrl = `https://germanwithgaurav.com/blog/${article.slug}`;
+  const imageUrl = article.featuredImage.startsWith("http")
+    ? article.featuredImage
+    : `https://germanwithgaurav.com${article.featuredImage}`;
+
+  const articleNode = {
     "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
+    isPartOf: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+      url: canonicalUrl,
+      name: article.title,
+    },
     headline: article.title,
     description: article.excerpt,
-    image: article.featuredImage,
+    image: imageUrl,
     datePublished: article.publishedDate,
     dateModified: article.updatedDate,
+    mainEntityOfPage: canonicalUrl,
+    inLanguage: "en-US",
     author: {
       "@type": "Person",
       "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
@@ -106,7 +264,81 @@ export default async function BlogArticlePage({ params }: PageProps) {
         url: "https://germanwithgaurav.com/logo.png",
       },
     },
-    mainEntityOfPage: `https://germanwithgaurav.com/blog/${article.slug}`,
+  };
+
+  const breadcrumbNode = {
+    "@type": "BreadcrumbList",
+    "@id": `${canonicalUrl}#breadcrumbs`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://germanwithgaurav.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://germanwithgaurav.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.category,
+        item: `https://germanwithgaurav.com/category/${article.categorySlug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: article.title,
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  const faqNode =
+    article.faqs && article.faqs.length > 0
+      ? {
+          "@type": "FAQPage",
+          "@id": `${canonicalUrl}#faq`,
+          mainEntity: article.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
+  const fullSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      articleNode,
+      breadcrumbNode,
+      ...(faqNode ? [faqNode] : []),
+      {
+        "@type": "Person",
+        "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
+        name: "Gaurav Raghuvanshi",
+        jobTitle: "German Language Teacher & Founder",
+        url: "https://germanwithgaurav.com/about-gaurav-raghuvanshi",
+        sameAs: [
+          "https://www.youtube.com/@germanwithgaurav",
+          "https://www.instagram.com/germanwithgaurav",
+          "https://www.linkedin.com/in/gaurav-raghuvanshi",
+        ],
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://germanwithgaurav.com/#organization",
+        name: "German With Gaurav",
+        url: "https://germanwithgaurav.com",
+        logo: "https://germanwithgaurav.com/logo.png",
+      },
+    ],
   };
 
   const breadcrumbs = [
@@ -127,7 +359,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
   return (
     <article className="min-h-screen bg-white">
-      <JsonLd data={articleJsonLd} />
+      <JsonLd data={fullSchema} />
 
       {/* Breadcrumb Navigation */}
       <div className="bg-slate-50 border-b border-slate-200/80">
@@ -207,37 +439,11 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <TableOfContents items={article.tableOfContents} />
             </div>
 
-            {/* Main Article Body */}
-            <div className="prose prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-slate-900 prose-p:text-slate-700 prose-p:leading-relaxed prose-li:text-slate-700">
+            {/* Main Article Body with Enhanced Markdown Parsing */}
+            <div className="prose prose-slate max-w-none">
               <div
                 dangerouslySetInnerHTML={{
-                  __html: article.content
-                    .split("\n\n")
-                    .map((block) => {
-                      if (block.startsWith("## ")) {
-                        const headingText = block.replace("## ", "").trim();
-                        // Find matching TOC id
-                        const tocMatch = article.tableOfContents.find(
-                          (t) => t.title.toLowerCase() === headingText.toLowerCase() || headingText.includes(t.title)
-                        );
-                        const id = tocMatch ? tocMatch.id : headingText.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-                        return `<h2 id="${id}" class="text-2xl font-black text-slate-900 mt-10 mb-4">${headingText}</h2>`;
-                      }
-                      if (block.startsWith("### ")) {
-                        const h3Text = block.replace("### ", "").trim();
-                        return `<h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">${h3Text}</h3>`;
-                      }
-                      if (block.startsWith("* ")) {
-                        const items = block.split("\n* ").map((item) => item.replace("* ", "").trim());
-                        return `<ul class="space-y-2 my-4 list-disc pl-5">${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
-                      }
-                      if (block.startsWith("1. ")) {
-                        const items = block.split(/\n\d+\. /).map((item) => item.replace(/^\d+\. /, "").trim());
-                        return `<ol class="space-y-2 my-4 list-decimal pl-5">${items.map((i) => `<li>${i}</li>`).join("")}</ol>`;
-                      }
-                      return `<p class="text-slate-700 leading-relaxed mb-4">${block.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\*(.*?)\*/g, "<em>$1</em>")}</p>`;
-                    })
-                    .join(""),
+                  __html: parseMarkdownToHtml(article.content, article.tableOfContents),
                 }}
               />
             </div>

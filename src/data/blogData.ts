@@ -449,96 +449,230 @@ Each module carries 25 points, making 100 points maximum. To pass the Goethe-Zer
     relatedArticles: ["german-language-levels-explained-a1-to-c2", "how-long-does-it-take-to-reach-b1-level"],
   },
   {
-    slug: "a1-vs-a2-german-whats-the-difference",
-    title: "A1 vs A2 German: What's the Difference? A Complete Comparison for Beginners",
+    slug: "a1-vs-a2-german-level",
+    title: "A1 vs A2 German Level: What's the Difference? (Syllabus, Grammar & Exam Comparison)",
     category: "German for Beginners",
     categorySlug: "german-for-beginners",
     excerpt:
-      "A1 is the first step in your German learning journey. It's a basic beginner level that teaches you everyday survival phrases, while A2 expands into detailed daily conversations, past tenses, and the Dative case.",
-    readTime: "7 min read",
+      "Wondering whether to start with A1 or jump directly into A2 German? Compare A1 vs A2 German levels: guided hours, vocabulary size, grammar milestones (Accusative vs Dative, Perfekt), Goethe exam structures, and visa eligibility.",
+    readTime: "9 min read",
     publishedDate: "2026-03-10",
-    updatedDate: "2026-09-01",
+    updatedDate: "2026-09-13",
     author: {
       name: "Gaurav Raghuvanshi",
       role: "German Language Teacher & Founder",
       avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/language-levels.png",
-    imageAlt: "A1 vs A2 German What is the Difference Comparison Chart",
+    imageAlt: "A1 vs A2 German Level Difference Comparison Chart and Syllabus",
     directAnswer:
-      "The primary difference between A1 and A2 German is depth and grammatical complexity: A1 focuses on basic survival phrases, introductions, present tense, and the Accusative case (80–100 hours). A2 progresses to fluid daily conversations, past tenses (Perfekt and Präteritum), reflexive verbs, and the Dative case (100–120 hours).",
+      "The primary difference between A1 and A2 German is conversational independence: A1 focuses on elementary survival phrases, personal introductions, present tense, and the Accusative case (80–100 guided hours). A2 elevates you to connected daily conversations, conversational past tense (Perfekt), subordinate clauses with verb-kick (weil, dass), and the Dative case (100–120 guided hours). While A1 satisfies spouse visa requirements, A2 is the baseline for student internships and Opportunity Card (Chancenkarte) immigration points.",
     tableOfContents: [
-      { id: "core-difference", title: "Core Difference: A1 (Survival) vs. A2 (Elementary Fluency)" },
-      { id: "grammar-comparison", title: "Grammar Comparison: What You Learn in Each Level" },
-      { id: "vocabulary-speaking", title: "Vocabulary & Real-Life Speaking Capabilities" },
-      { id: "goethe-exam-differences", title: "Goethe-Zertifikat A1 vs. A2 Exam Format" },
-      { id: "which-level-do-you-need", title: "Which Level Do You Need for Germany?" },
+      { id: "master-comparison-table", title: "A1 vs A2 German: Quick Summary & Master Comparison Table" },
+      { id: "cefr-definitions", title: "CEFR Framework: Breakthrough (A1) vs. Waystage (A2)" },
+      { id: "grammar-milestones", title: "The 5 Major Grammar Jumps from A1 to A2" },
+      { id: "vocabulary-and-dialogues", title: "Real-Life Speaking Scenarios: A1 vs. A2 in Action" },
+      { id: "goethe-exam-differences", title: "Goethe-Zertifikat A1 vs. A2 Exam Format Comparison" },
+      { id: "visa-and-career-needs", title: "Which Level Do You Need for Germany? (Visas, Studies & Jobs)" },
+      { id: "can-you-skip-a1", title: "Can You Skip A1 and Join A2 Directly? (5-Point Self-Assessment)" },
+      { id: "timeline-and-pacing", title: "Timeline: How Long Does It Take to Move from A1 to A2?" },
+      { id: "why-gwg-small-batches", title: "Why Small Batches (5–7 Students) Accelerate Your A2 Fluency" },
     ],
     content: `
-## Core Difference: A1 (Survival) vs. A2 (Elementary Fluency)
+## A1 vs A2 German: Quick Summary & Master Comparison Table
 
-Under the Common European Framework of Reference for Languages (CEFR), **Level A1** is defined as "Breakthrough / Beginner", whereas **Level A2** is "Waystage / Elementary".
+If you are planning to learn German for studies, work, or family relocation in Germany, choosing the right starting point is essential. Beginners often ask: *"How big is the step from A1 to A2?"* and *"Can I skip A1 if I have studied on language apps?"*
 
-* **At Level A1:** You learn how to communicate basic survival needs if the other person speaks slowly and clearly. You can introduce yourself, ask someone where they come from, order food at a restaurant, and spell words.
-* **At Level A2:** You transition from isolated sentences to connected conversations. You can talk about your background, past travel memories, job routines, and express personal opinions using connectors like *weil* (because) and *dass* (that).
+Under the **Common European Framework of Reference for Languages (CEFR)**, German proficiency is divided into six levels (A1 to C2). Levels **A1 (Breakthrough)** and **A2 (Waystage)** make up the foundational stage of your language journey.
 
-## Grammar Comparison: What You Learn in Each Level
+Here is an executive side-by-side comparison matrix:
 
-| Grammatical Feature | A1 German Level | A2 German Level |
+| Metric / Dimension | A1 German (Breakthrough) | A2 German (Waystage) | Practical Impact |
+| :--- | :--- | :--- | :--- |
+| **CEFR Stage** | Beginner / Survival | Elementary / Conversational | Move from robotic words to natural sentences |
+| **Instructional Hours** | 80–100 Guided Hours | 100–120 Guided Hours | Goethe-Institut recommended classroom time |
+| **Active Vocabulary** | ~600 to 800 words | ~1,500 to 2,000 words | 2.5× increase in expressive capability |
+| **Grammatical Cases** | Nominative & Accusative | Nominative, Accusative & **Dative** | Master indirect objects & prepositions |
+| **Tenses Covered** | Present Tense (*Präsens*) | Present + **Perfekt (Past)** + *Präteritum* | Talk about past memories, travel & work |
+| **Sentence Structure** | Simple SVO (Main Clauses) | **Subordinate clauses (*weil, dass, wenn*)** | Verb moves to the end of the clause |
+| **Prepositions** | Basic Accusative (*für, ohne*) | **Two-way (*Wechselpräpositionen*)** + Dative | Express location (*Dativ*) vs. direction (*Akkusativ*) |
+| **Goethe Exam** | Goethe-Zertifikat A1 (80 min) | Goethe-Zertifikat A2 (100 min) | Both require 60% minimum to pass |
+| **Legal / Visa Value** | Spouse / Family Reunion Visa | Student jobs (*Werkstudent*), *Chancenkarte* (2 pts) | A2 unlocks real social and work interactions |
+
+> **Teacher's Note:** At A1, you learn how to survive if the other person speaks slowly and helps you. At A2, you begin holding actual two-way conversations about your daily life, your past experiences, and your career goals.
+
+## CEFR Framework: Breakthrough (A1) vs. Waystage (A2)
+
+The Council of Europe categorizes language learners into three broad bands: A (Basic User), B (Independent User), and C (Proficient User).
+
+### Level A1: Breakthrough / Beginner
+At A1, you learn to:
+* Understand and use familiar, everyday expressions and very basic phrases aimed at the satisfaction of concrete needs.
+* Introduce yourself and others, and ask and answer questions about personal details such as where you live, people you know, and things you have.
+* Interact in a simple way provided the other person talks slowly and clearly and is prepared to help.
+
+### Level A2: Waystage / Elementary
+At A2, you step into functional conversational ability:
+* Understand sentences and frequently used expressions related to areas of most immediate relevance (e.g., very basic personal and family information, shopping, local geography, employment).
+* Communicate in simple and routine tasks requiring a direct exchange of information on familiar topics.
+* Describe in simple terms aspects of your background, immediate environment, and matters in areas of immediate need.
+
+## The 5 Major Grammar Jumps from A1 to A2
+
+The difference between A1 and A2 is not just learning more words—it is mastering the grammatical mechanisms that connect your thoughts into cohesive German sentences.
+
+### 1. Introduction of the Dative Case (*Der Dativ*)
+At A1, you master the Nominative (subject) and Accusative (direct object) cases. At A2, German introduces the **Dative Case** (indirect recipient), along with verbs that strictly demand Dative (*helfen, danken, gefallen, gehören*).
+* **A1 (Accusative only):** *Ich kaufe* **einen** *Kaffee.* (I buy a coffee.)
+* **A2 (Dative + Accusative):** *Ich gebe* **dem** *Kellner das Geld.* (I give the waiter [dative] the money [accusative].)
+
+To master the nuances of all four German cases, explore our [Beginner's Guide to German Cases](/blog/beginners-guide-to-german-cases).
+
+### 2. Conversational Past Tense (*Das Perfekt*)
+At A1, almost all conversations occur in the Present Tense (*Präsens*). At A2, you learn **Das Perfekt**—the tense Germans use for 95% of all spoken past-tense conversations:
+* Formed with auxiliary verbs (*haben* or *sein*) + Past Participle (*Partizip II*):
+* *Example:* *"Gestern* **habe** *ich Deutsch* **gelernt**." (Yesterday I learned German.)
+* *Example:* *"Letzte Woche* **bin** *ich nach Berlin* **geflogen**." (Last week I flew to Berlin.)
+
+### 3. Subordinate Clauses with Verb-Kick (*Kausalsätze & Nebensätze*)
+In A1, sentences follow standard Subject-Verb-Object word order (*"Ich lerne Deutsch. Ich möchte in Deutschland arbeiten."*).
+In A2, you combine these thoughts using subordinating conjunctions (*weil* = because, *dass* = that, *wenn* = if/when, *obwohl* = although), which **kicks the conjugated verb to the very end of the clause**:
+* *A2 Sentence:* *"Ich lerne Deutsch,* **weil** *ich in Deutschland arbeiten* **möchte**."
+
+### 4. Two-Way Prepositions (*Wechselpräpositionen*)
+A2 introduces the famous 9 two-way prepositions (*an, auf, hinter, in, neben, über, unter, vor, zwischen*).
+* **Movement / Destination (Wohin?):** Triggers the **Accusative** case (*"Ich stelle das Buch auf* **den** *Tisch."*)
+* **Static Position / Location (Wo?):** Triggers the **Dative** case (*"Das Buch liegt auf* **dem** *Tisch."*)
+
+### 5. Adjective Endings (*Adjektivdeklination*)
+In A1, adjectives are mostly used in simple predicate positions (*"Das Auto ist rot"*). In A2, adjectives precede nouns and take specific grammatical endings based on gender, case, and article type (*"Ich fahre ein* **rotes** *Auto"* / *"Mit dem* **neuen** *Auto"*).
+
+## Real-Life Speaking Scenarios: A1 vs. A2 in Action
+
+To understand what this means in practice, look at how an A1 speaker and an A2 speaker handle common situations:
+
+### Scenario 1: Introducing Your Professional Background
+* **A1 Speaker:** *"Ich bin Softwareentwickler. Ich arbeite bei Siemens. Ich wohne in Pune."* (Short, fragmented sentences.)
+* **A2 Speaker:** *"Ich arbeite seit drei Jahren als Softwareentwickler bei Siemens in Pune, aber nächstes Jahr möchte ich nach München umziehen, weil es dort viele spannende Tech-Jobs gibt."* (Complex sentence with prepositional time phrases, conjunctions, and subordinate clause.)
+
+### Scenario 2: Explaining Why You Were Late or Absent
+* **A1 Speaker:** *"Entschuldigung. Mein Zug war spät. Es tut mir leid."*
+* **A2 Speaker:** *"Entschuldigen Sie bitte die Verspätung. Mein Zug hatte 20 Minuten Verspätung, weil es ein Problem mit den Signalen gab."*
+
+### Scenario 3: Ordering & Customizing Food at a Restaurant
+* **A1 Speaker:** *"Ich nehme ein Schnitzel und ein Wasser, bitte."*
+* **A2 Speaker:** *"Könnten Sie mir bitte die Speisekarte bringen? Ich hätte gerne das Schnitzel, aber mit Bratkartoffeln statt Pommes. Und bringen Sie mir bitte ein stilles Wasser ohne Eis."*
+
+## Goethe-Zertifikat A1 vs. A2 Exam Format Comparison
+
+Both examinations are administered globally by the Goethe-Institut (Max Mueller Bhavan in India). Both test four core skills, but the expectations differ significantly:
+
+| Module | Goethe-Zertifikat A1 (Start Deutsch 1) | Goethe-Zertifikat A2 |
 | :--- | :--- | :--- |
-| **Cases Covered** | Nominative & Accusative | Nominative, Accusative & **Dative** |
-| **Prepositions** | Basic accusative prepositions (für, ohne) | **Two-way prepositions (Wechselpräpositionen)** + Dative prepositions |
-| **Tenses** | Present Tense (*Präsens*) | **Perfekt (Conversational Past)** & *Präteritum* (sein/haben) |
-| **Sentence Structure** | Main clauses with Subject-Verb-Object | **Subordinate clauses** with verb kicked to the end (*Kausalsätze*) |
-| **Articles & Adjectives** | Definite/indefinite articles (*der, die, das*) | **Adjective declensions** (*Adjektivdeklination*) |
-| **Verbs** | Regular & common irregular verbs | **Reflexive verbs** (*sich freuen, sich erinnern*) & Modal verbs |
+| **Hören (Listening)** | 20 Mins • 15 questions • Spoken slowly, played twice • Clear studio recordings | 30 Mins • 20 questions • Natural conversational tempo, background airport/street noise |
+| **Lesen (Reading)** | 25 Mins • 15 questions • Short notes, public signs, classified ads | 30 Mins • 20 questions • Newspaper reports, multi-paragraph formal emails, magazine articles |
+| **Schreiben (Writing)** | 20 Mins • 2 parts • Part 1: Fill 5 form fields • Part 2: Write a 30-word personal email | 30 Mins • 2 parts • Part 1: 30–40 word informal message • Part 2: 40–50 word formal letter/email |
+| **Sprechen (Speaking)** | 15 Mins • 3 parts • Group of 3–4 candidates • Spell name/phone, ask question with flashcard | 15 Mins • 3 parts • Paired candidates • Talk about your life, negotiate a joint plan with your partner |
+| **Total Duration** | ~80 Minutes | ~105 Minutes |
+| **Pass Requirement** | Minimum 60 out of 100 points (60%) | Minimum 60 out of 100 points (60%) |
 
-## Vocabulary & Real-Life Speaking Capabilities
+For an in-depth breakdown of the A1 exam syllabus and test format, read our complete [Goethe-Zertifikat A1 Exam Guide](/blog/goethe-zertifikat-a1-exam-guide).
 
-### What You Can Say at A1:
-* *"Ich heiße Rahul und ich komme aus Indien."* (My name is Rahul and I come from India.)
-* *"Ich möchte bitte einen Kaffee und ein Croissant."* (I would like a coffee and a croissant, please.)
-* *"Wo ist der Bahnhof?"* (Where is the train station?)
+## Which Level Do You Need for Germany? (Visas, Studies & Jobs)
 
-### What You Can Say at A2:
-* *"Gestern habe ich mit meinem Kollegen gesprochen, weil wir ein neues Projekt planen."* (Yesterday I spoke with my colleague because we are planning a new project.)
-* *"Als ich in München war, hat mir die Architektur sehr gut gefallen."* (When I was in Munich, I really liked the architecture.)
-* *"Könnten Sie mir bitte helfen, diesen Brief zu verstehen?"* (Could you please help me understand this letter?)
+Your required level depends on your official objective:
 
-## Goethe-Zertifikat A1 vs. A2 Exam Format
+1. **German Spouse / Family Reunion Visa (*Ehegattennachzug*):**
+   * **Required Level:** **Goethe-Zertifikat A1**.
+   * By German federal law (*Aufenthaltsgesetz*), spouses joining a resident or German citizen must demonstrate basic German proficiency (A1) prior to visa stamping.
 
-Both the **Goethe-Zertifikat A1 (Start Deutsch 1)** and **Goethe-Zertifikat A2** evaluate four skills:
-1. **Hören (Listening):** A1 audio is spoken slowly and repeated twice. A2 audio features natural speaking speeds with background ambience (radio, train stations, telephone calls).
-2. **Lesen (Reading):** A1 tests basic notices and short emails. A2 tests magazine blurbs, formal workplace notices, and multi-paragraph letters.
-3. **Schreiben (Writing):** A1 requires filling out a registration form and writing a 30-word note. A2 requires writing a 50–60 word formal and informal email.
-4. **Sprechen (Speaking):** A1 tests flashcard prompts and basic self-introductions. A2 tests describing your weekend, negotiating an appointment with a partner, and responding to spontaneous examiner questions.
+2. **Opportunity Card (*Chancenkarte* Job Seeker Visa):**
+   * Under Germany's points-based immigration system, language proficiency earns valuable points:
+   * Level A1: 1 point
+   * Level A2: 2 points
+   * Level B1: 3 points
+   * Achieving A2 significantly boosts your point total and allows you to pass initial telephone screenings with German recruiters.
 
-## Which Level Do You Need for Germany?
+3. **English-Taught Master's Programs in Germany:**
+   * While universities accept IELTS/TOEFL for English-taught degrees, daily life in student dorms, grocery shopping, registration at the *Bürgeramt*, and landing a working student job (*Werkstudent*) realistically require **Level A2**.
 
-* **Spouse / Family Reunion Visa:** Goethe-Zertifikat A1 is the legal minimum required by German embassies.
-* **Student Internships & Working Student Roles:** A2 is strongly recommended so you can navigate lab work and team lunches comfortably.
-* **Opportunity Card (Chancenkarte):** A1 provides eligibility points, but A2 or B1 gives you a competitive advantage during interviews in Germany.
+4. **Direct Employment in German Industry (IT, Engineering, Healthcare):**
+   * A1 is insufficient for professional work. A2 is the absolute foundation required before entering [B1 German](/courses/b1-german), which is the standard benchmark for professional integration and EU Blue Card fast-track permanent residency (Niederlassungserlaubnis in 21 months).
+
+## Can You Skip A1 and Join A2 Directly? (5-Point Self-Assessment)
+
+Many learners who have completed Duolingo streaks, watched YouTube tutorials, or studied German in high school wonder if they can skip A1.
+
+Take Gaurav's 5-point self-diagnostic test:
+1. **Can you conjugate irregular verbs in the present tense?** (*nehmen → du nimmst, fahren → er fährt, sehen → du siehst*)
+2. **Do you instinctively know when to use *den* vs. *der*?** (Accusative masculine change: *"Ich sehe den Mann"*)
+3. **Can you ask and answer open-ended questions (*W-Fragen*) without hesitation?** (*Wer, Wie, Was, Wo, Wohin, Woher, Warum*)
+4. **Can you write a coherent 30-word email introducing yourself, stating your hobby, and asking for an appointment?**
+5. **Can you understand spoken German numbers up to 1,000, telephone numbers, and time formats (*Viertel vor, halb*)?**
+
+> **The Verdict:** If you can comfortably answer "YES" to all five questions, you are ready to join our [A2 German Course](/courses/a2-german). If you hesitated on verb conjugations or case endings, starting with A2 will cause confusion when Dative and two-way prepositions are introduced. Taking a focused [A1 German Course](/courses/a1-german) first builds the muscle memory needed to breeze through A2.
+
+## Timeline: How Long Does It Take to Move from A1 to A2?
+
+Language acquisition requires structured exposure and spoken repetition:
+* **Standard Goethe-Institut / Large Institute Timeline:** 8 to 10 weeks per level (approximately 4 months total for A1 + A2).
+* **German With Gaurav Small-Batch Timeline:** With 4 live sessions per week and active daily speaking drills, our students master A1 in **8 to 10 weeks** and complete A2 in **8 to 10 weeks**.
+* **Total time from zero to solid A2 graduate:** **4 to 5 months**.
+
+To plan your long-term roadmap from zero to B1 certification, review our guide on [How Long Does It Take to Reach B1 Level?](/blog/how-long-does-it-take-to-reach-b1-level).
+
+## Why Small Batches (5–7 Students) Accelerate Your A2 Fluency
+
+Moving from A1 to A2 is where most self-learners get stuck. Why? Because you cannot master conversational past tenses (*Perfekt*) and Dative prepositions by swiping on a smartphone screen. You need real-time conversational pressure with immediate teacher correction.
+
+At **German With Gaurav**, every course is structured around three non-negotiable principles:
+1. **Strict Batch Cap of 5–7 Students:** In large classes of 25–30 learners, you speak for less than 2 minutes per session. In our small batches, every student speaks for 15–20 minutes every single day.
+2. **Conceptual Clarity Over Rote Memorization:** Gaurav explains German sentence mechanics using intuitive logical frameworks that resonate with Indian language speakers (Hindi/Sanskrit case parallels).
+3. **Goethe Exam Pattern Training from Week 1:** Every grammar concept is reinforced with actual exam-style listening audios, letter templates, and paired speaking simulations.
+
+Ready to see how our teaching method works? [Book a Free 1-on-1 Demo Session with Gaurav](/book-a-free-demo) to get your personalized level evaluation and study plan.
     `,
     keyTakeaways: [
-      "A1 covers 80–100 hours of basic greetings, present tense, and accusative case.",
-      "A2 covers 100–120 hours of conversational past tense (Perfekt), dative case, and subordinate clauses.",
-      "A1 provides survival vocabulary; A2 unlocks natural daily communication and workplace banter.",
-      "German With Gaurav offers small-batch courses for both A1 and A2 with 5–7 students maximum.",
+      "A1 provides survival language (80–100 hours); A2 delivers conversational independence (100–120 hours).",
+      "The major grammar leaps at A2 are the Dative case, conversational past tense (Perfekt), and subordinate clauses (weil, dass).",
+      "A1 satisfies spouse/family reunion visa laws; A2 is needed for student jobs (Werkstudent) and Opportunity Card points.",
+      "You can skip A1 only if you have mastered irregular verb conjugations, accusative articles, and basic sentence construction.",
+      "Small batches of 5–7 learners provide the daily speaking talk-time required to transition smoothly from A1 to A2.",
     ],
     faqs: [
       {
-        question: "Can I skip A1 and join an A2 course directly?",
+        question: "How many vocabulary words do you know in A1 vs A2 German?",
         answer:
-          "Yes, if you have already completed an A1 curriculum or can introduce yourself, conjugate present tense verbs, and understand basic accusative cases. We offer a free 10-minute diagnostic call with Gaurav to evaluate your level.",
+          "At A1 German, you learn approximately 600 to 800 active vocabulary words focused on basic survival, food, family, and directions. At A2 German, your active vocabulary expands to 1,500–2,000 words, enabling you to express opinions, describe past events, and manage workplace situations.",
       },
       {
-        question: "How long does it take to go from A1 to A2?",
+        question: "Can I skip A1 and join an A2 German course directly?",
         answer:
-          "With consistent small-batch study at German With Gaurav (4 to 5 sessions per week), learners comfortably complete A2 in 8 to 10 weeks.",
+          "Yes, if you have already mastered A1 grammar fundamentals: present tense regular and irregular verb conjugations, modal verbs, accusative case (den/einen), and basic sentence word order. German With Gaurav offers a free diagnostic evaluation call with Gaurav to confirm your readiness before enrolling.",
+      },
+      {
+        question: "Is A2 German significantly harder than A1?",
+        answer:
+          "A2 is not harder in terms of concepts, but it introduces more grammatical moving parts simultaneously: the Dative case, two-way prepositions (Wechselpräpositionen), and past tense (Perfekt). With structured live practice and small-batch interaction, most students find A2 the most exciting level because they start speaking real conversational German.",
+      },
+      {
+        question: "Which level is required for the German Opportunity Card (Chancenkarte)?",
+        answer:
+          "Under the German Opportunity Card points system, A1 German earns you 1 point, A2 earns 2 points, and B1 earns 3 points. While A1 is the minimum language tier to qualify for points, reaching A2 gives you a substantial advantage when interviewing with German employers.",
+      },
+      {
+        question: "Can I get a German spouse visa with A1 or do I need A2?",
+        answer:
+          "For a German spouse or family reunion visa (Ehegattennachzug), the German government legally requires a valid Goethe-Zertifikat A1 (Start Deutsch 1) or equivalent certificate with at least 60% marks. A2 is not mandatory for the initial visa, though highly beneficial once you land in Germany.",
+      },
+      {
+        question: "How long does it take to complete A1 and A2 with German With Gaurav?",
+        answer:
+          "In our small batches (5–7 students) meeting 4 to 5 times per week, each level takes between 8 to 10 weeks. Most students comfortably complete both A1 and A2 in approximately 4 to 5 months of consistent study.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german"],
-    relatedArticles: ["german-language-levels-explained-a1-to-c2", "how-long-does-it-take-to-reach-b1-level"],
+    relatedCourses: ["a1-german", "a2-german", "b1-german"],
+    relatedArticles: ["beginners-guide-to-german-cases", "how-long-does-it-take-to-reach-b1-level", "german-language-levels-explained-a1-to-c2"],
   },
   {
     slug: "beginners-guide-to-german-cases",
@@ -647,6 +781,6 @@ The Genitive case shows **possession or relationship**, equivalent to English *"
       },
     ],
     relatedCourses: ["a1-german", "a2-german"],
-    relatedArticles: ["a1-vs-a2-german-whats-the-difference", "german-language-levels-explained-a1-to-c2"],
+    relatedArticles: ["a1-vs-a2-german-level", "german-language-levels-explained-a1-to-c2"],
   },
 ];

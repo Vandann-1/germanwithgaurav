@@ -181,33 +181,63 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/a1-vs-a2-german-level",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german-level/",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
         source: "/a1-vs-a2-german-whats-the-difference",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
         source: "/a1-vs-a2-german-whats-the-difference/",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
+        source: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
+        source: "/blog/a1-vs-a2-german-whats-the-difference/",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
         source: "/a1-vs-a2-german-what-is-the-difference",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
         source: "/a1-vs-a2-german-what-is-the-difference/",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
         source: "/a1-vs-a2-german",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
         source: "/a1-vs-a2-german/",
-        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2",
+        destination: "/blog/a1-vs-a2-german-level",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2/",
+        destination: "/blog/a1-vs-a2-german-level",
         permanent: true,
       },
       {
