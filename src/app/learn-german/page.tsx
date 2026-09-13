@@ -6,9 +6,9 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { ArrowRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "German Language Levels Explained (A1 to C2) | Learn German Guide",
+  title: "German Learning Pathway & CEFR Levels Roadmap | German With Gaurav",
   description:
-    "Comprehensive guide to CEFR German language levels: A1, A2, B1, B2, C1, and C2. Learn required study hours, exam formats, and proficiency thresholds for studying or working in Germany.",
+    "Complete CEFR German language roadmap for Indian students and professionals. Understand A1, A2, and B1 course milestones, Goethe exam requirements, and study hours with German With Gaurav.",
   alternates: {
     canonical: "/learn-german",
   },

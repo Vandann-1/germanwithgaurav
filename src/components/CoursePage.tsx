@@ -38,13 +38,16 @@ export function CoursePage({ course }: CoursePageProps) {
         description: course.shortDescription,
         provider: {
           "@type": "EducationalOrganization",
+          "@id": "https://germanwithgaurav.com/#organization",
           name: "German With Gaurav",
           url: "https://germanwithgaurav.com",
         },
         instructor: {
           "@type": "Person",
+          "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
           name: "Gaurav Raghuvanshi",
-          url: "https://germanwithgaurav.com/about",
+          jobTitle: "German Language Teacher & Founder",
+          url: "https://germanwithgaurav.com/about-gaurav-raghuvanshi",
         },
         educationalCredentialAwarded: `German ${course.level} Proficiency & Goethe-Zertifikat ${course.level} Preparation`,
         hasCourseInstance: {
@@ -52,8 +55,7 @@ export function CoursePage({ course }: CoursePageProps) {
           courseMode: "online",
           courseWorkload: course.duration,
           instructor: {
-            "@type": "Person",
-            name: "Gaurav Raghuvanshi",
+            "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
           },
         },
       },

@@ -39,7 +39,7 @@ export default function BookFreeDemoPage() {
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300/80 text-xs font-bold tracking-wide uppercase">
                 <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                <span>PRIMARY ADMISSIONS FUNNEL</span>
+                <span>FREE 1-ON-1 DEMO SESSION</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">

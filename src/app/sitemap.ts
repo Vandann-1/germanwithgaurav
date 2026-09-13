@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes
   const staticRoutes = [
     "",
+    "/about-gaurav-raghuvanshi",
     "/about",
     "/courses",
     "/learn-german",
@@ -21,9 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/refund-policy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: new Date("2026-09-01"),
     changeFrequency: "weekly" as const,
-    priority: route === "" ? 1.0 : route.startsWith("/courses") || route === "/book-a-free-demo" ? 0.9 : 0.8,
+    priority:
+      route === ""
+        ? 1.0
+        : route === "/about-gaurav-raghuvanshi" || route.startsWith("/courses") || route === "/book-a-free-demo"
+        ? 0.9
+        : 0.8,
   }));
 
   // Course routes

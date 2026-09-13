@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Gaurav Raghuvanshi | German With Gaurav",
+  title: "About Gaurav Raghuvanshi | German Language Teacher | German With Gaurav",
   description:
     "Learn about Gaurav Raghuvanshi, German educator with 19+ years of teaching experience. Discover the GWG methodology, student achievements, and our Pune language academy.",
   alternates: {
@@ -28,15 +28,18 @@ export default function AboutPage() {
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
     name: "Gaurav Raghuvanshi",
-    jobTitle: "Founder & Lead German Language Instructor",
+    jobTitle: "German Language Teacher & Founder",
     worksFor: {
       "@type": "EducationalOrganization",
+      "@id": "https://germanwithgaurav.com/#organization",
       name: "German With Gaurav",
       url: "https://germanwithgaurav.com",
     },
     description: siteConfig.founder.bio,
-    url: "https://germanwithgaurav.com/about",
+    url: "https://germanwithgaurav.com/about-gaurav-raghuvanshi",
+    image: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     sameAs: [
       siteConfig.social.instagram,
       siteConfig.social.youtube,

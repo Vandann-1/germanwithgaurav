@@ -30,9 +30,6 @@ export interface BlogArticle {
 
 export const blogCategories = [
   { name: "German for Beginners", slug: "german-for-beginners", description: "Foundational guides, grammar primers, and starter tips for new German learners." },
-  { name: "Tips for Learning German", slug: "tips-for-learning-german", description: "Practical strategies to remember vocabulary, master cases, and speak with confidence." },
-  { name: "Benefit for german", slug: "benefit-for-german", description: "How German language fluency accelerates your career, relocation, and university life." },
-  { name: "Uncategorized", slug: "uncategorized", description: "General insights, career guidance, and practical advice on German language mastery." },
   { name: "German Learning Tips", slug: "german-learning-tips", description: "Practical strategies to remember vocabulary, master cases, and speak with confidence." },
   { name: "Benefits of Learning German", slug: "benefits-of-learning-german", description: "How German language fluency accelerates your career, relocation, and university life." },
   { name: "German Exams", slug: "german-exams", description: "Complete blueprints, formats, and scoring guides for Goethe-Zertifikat and CEFR exams." },
@@ -43,8 +40,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "how-much-german-do-you-need-to-work-in-germany",
     title: "How Much German Do You Need to Work in Germany? B1 Vs B2 Guide",
-    category: "Uncategorized",
-    categorySlug: "uncategorized",
+    category: "Germany Careers",
+    categorySlug: "germany-careers",
     excerpt:
       "Do you need B1, B2, or even C1 German to work in Germany? There isn’t one universal answer. The German level you need depends on your job, industry, employer, workplace responsibilities, and whether your profession is regulated. Some jobs may be available with limited...",
     readTime: "7 min read",
@@ -52,8 +49,8 @@ export const blogArticles: BlogArticle[] = [
     updatedDate: "August 24, 2026",
     author: {
       name: "Gaurav Raghuvanshi",
-      role: "Founder & Lead German Instructor",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      role: "German Language Teacher & Founder",
+      avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/how-much-german.jpeg",
     imageAlt: "How Much German Do You Need to Work in Germany? B1 Vs B2 Guide",
@@ -147,8 +144,8 @@ Studies across European recruitment networks consistently indicate that internat
     updatedDate: "June 28, 2026",
     author: {
       name: "Gaurav Raghuvanshi",
-      role: "Founder & Lead German Instructor",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      role: "German Language Teacher & Founder",
+      avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/language-levels.png",
     imageAlt: "German Language Levels Explained (A1 to C2) Infographic Chart",
@@ -218,8 +215,8 @@ Whether you take the Goethe-Zertifikat, telc, TestDaF, or ÖSD, your certificate
   {
     slug: "how-long-does-it-take-to-reach-b1-level",
     title: "How Long Does It Take to Reach B1 German in 2026? A Complete Guide for Students and Professionals",
-    category: "Tips for Learning German",
-    categorySlug: "tips-for-learning-german",
+    category: "German Learning Tips",
+    categorySlug: "german-learning-tips",
     excerpt:
       "Learning German has become one of the smartest investments for students and professionals who want to study, work, or build a career in Germany. One of the most common questions beginners ask is: “How long does it take to reach B1 German?” The answer...",
     readTime: "6 min read",
@@ -227,8 +224,8 @@ Whether you take the Goethe-Zertifikat, telc, TestDaF, or ÖSD, your certificate
     updatedDate: "June 11, 2026",
     author: {
       name: "Gaurav Raghuvanshi",
-      role: "Founder & Lead German Instructor",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      role: "German Language Teacher & Founder",
+      avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/how-long-b1.png",
     imageAlt: "How Long Does It Take to Reach B1 German in 2026",
@@ -309,8 +306,8 @@ Many learners sail through A1 greetings and food vocabulary, only to hit a wall 
   {
     slug: "is-learning-german-worth-it-in-2026",
     title: "Is Learning German Worth It in 2026? A Complete Guide for Students and Professionals.",
-    category: "Benefit for german",
-    categorySlug: "benefit-for-german",
+    category: "Benefits of Learning German",
+    categorySlug: "benefits-of-learning-german",
     excerpt:
       "Germany has become one of the most attractive destinations for students, skilled professionals, and job seekers from India. With excellent career opportunities, high-quality education, and a strong economy, it’s no surprise that more people are planning their move to Germany than ever before. However,...",
     readTime: "6 min read",
@@ -318,8 +315,8 @@ Many learners sail through A1 greetings and food vocabulary, only to hit a wall 
     updatedDate: "June 9, 2026",
     author: {
       name: "Gaurav Raghuvanshi",
-      role: "Founder & Lead German Instructor",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      role: "German Language Teacher & Founder",
+      avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/worth-it.png",
     imageAlt: "Is Learning German Worth It in 2026",
@@ -384,8 +381,8 @@ Germany offers generous standard annual paid leave (30 days/year), strict limits
     updatedDate: "2026-08-28",
     author: {
       name: "Gaurav Raghuvanshi",
-      role: "Founder & Lead German Instructor",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      role: "German Language Teacher & Founder",
+      avatar: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
     },
     featuredImage: "/images/blog/german-learning.png",
     imageAlt: "Student writing Goethe language test paper with pen and test booklet",

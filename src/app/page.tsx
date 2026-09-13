@@ -18,7 +18,7 @@ import Link from "next/link";
 import { ArrowRight, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "German With Gaurav | Learn German with Confidence. Speak German in Real Life.",
+  title: "Learn German Online with Gaurav Raghuvanshi | German With Gaurav",
   description:
     "Structured online German language courses (A1, A2, B1) for students, engineers, healthcare professionals, and Germany aspirants. Small 5–7 student batches led by Gaurav Raghuvanshi with 19+ years of expertise.",
   alternates: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  // Structured Data Schema for Homepage
+  // Structured Data Schema for Homepage with unified entity IDs
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -36,7 +36,7 @@ export default function HomePage() {
         "@id": "https://germanwithgaurav.com/#website",
         url: "https://germanwithgaurav.com",
         name: "German With Gaurav",
-        description: "Learn German Online with 19+ Years of Teaching Expertise",
+        description: "Learn German Online with German Language Teacher Gaurav Raghuvanshi",
         publisher: {
           "@id": "https://germanwithgaurav.com/#organization",
         },
@@ -46,13 +46,15 @@ export default function HomePage() {
         "@type": "EducationalOrganization",
         "@id": "https://germanwithgaurav.com/#organization",
         name: "German With Gaurav",
+        legalName: siteConfig.legalName,
         url: "https://germanwithgaurav.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://germanwithgaurav.com/wp-content/uploads/2024/04/germanwithgaurav-logo.png",
+          url: "https://germanwithgaurav.com/logo.png",
+          caption: "German With Gaurav Logo",
         },
         founder: {
-          "@id": "https://germanwithgaurav.com/#person",
+          "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
         },
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
@@ -72,14 +74,29 @@ export default function HomePage() {
       },
       {
         "@type": "Person",
-        "@id": "https://germanwithgaurav.com/#person",
+        "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
         name: "Gaurav Raghuvanshi",
-        jobTitle: "Founder & Lead German Language Instructor",
+        jobTitle: "German Language Teacher & Founder",
         worksFor: {
           "@id": "https://germanwithgaurav.com/#organization",
         },
         description: siteConfig.founder.bio,
-        url: "https://germanwithgaurav.com/about",
+        url: "https://germanwithgaurav.com/about-gaurav-raghuvanshi",
+        image: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
+        sameAs: [
+          siteConfig.social.instagram,
+          siteConfig.social.youtube,
+          siteConfig.social.linkedin,
+        ],
+        knowsAbout: [
+          "German Language",
+          "Goethe-Zertifikat A1",
+          "Goethe-Zertifikat A2",
+          "Goethe-Zertifikat B1",
+          "CEFR German Language Curriculum",
+          "German for Higher Studies in Germany",
+          "German for Working Professionals",
+        ],
       },
     ],
   };

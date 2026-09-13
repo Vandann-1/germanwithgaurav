@@ -32,15 +32,30 @@ export function Hero() {
 
         {/* Headline in Deep Oxford Navy & Serif Font */}
         <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#08175e] leading-[1.15]">
-          Go from intermediate <br className="hidden sm:inline" />
-          German Learner to <br className="hidden sm:inline" />
-          Advance German Speaker.
+          Learn German Online <br className="hidden sm:inline" />
+          with Gaurav Raghuvanshi
         </h1>
 
-        {/* Supporting Copy */}
-        <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          Online German courses that help you reach your goals faster than you ever thought possible.
+        {/* Supporting Copy - Natural Entity Clarification for Users & AI Engines */}
+        <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+          German With Gaurav is a structured online German language learning academy led by German language teacher Gaurav Raghuvanshi. Master practical speaking, intuitive grammar logic, and Goethe-Zertifikat preparation across A1, A2, and B1 levels in small batches of 5–7 learners.
         </p>
+
+        {/* Trust Value Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-1 text-xs sm:text-sm font-semibold text-slate-700">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+            ✓ Small 5–7 Student Batches
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+            ✓ A1, A2 &amp; B1 CEFR Levels
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+            ✓ Goethe Exam Focused
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+            ✓ High Daily Student Talk-Time
+          </span>
+        </div>
 
         {/* Dual CTAs - Deep Navy Primary + Framed Light Secondary */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -48,14 +63,14 @@ export function Hero() {
             href="/courses"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm bg-[#08175e] text-white hover:bg-[#050f42] shadow-md hover:shadow-lg transition-all active:scale-98"
           >
-            <span>Explore Courses!</span>
+            <span>Explore Courses</span>
           </Link>
 
           <Link
-            href="/contact"
+            href="/book-a-free-demo"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm bg-white text-slate-900 border-2 border-slate-900 hover:bg-slate-50 transition-all shadow-xs active:scale-98"
           >
-            <span>Contact Us!</span>
+            <span>Book a Free Demo</span>
           </Link>
         </div>
       </div>

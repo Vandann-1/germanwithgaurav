@@ -109,9 +109,6 @@ export default function ContactPage() {
                       <a href={`mailto:${siteConfig.contact.email}`} className="text-slate-600 hover:text-amber-700 block">
                         {siteConfig.contact.email}
                       </a>
-                      <a href={`mailto:${siteConfig.contact.alternateEmail}`} className="text-slate-400 hover:text-amber-700 text-xs block">
-                        {siteConfig.contact.alternateEmail}
-                      </a>
                     </div>
                   </div>
 

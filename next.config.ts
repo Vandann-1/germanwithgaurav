@@ -89,6 +89,76 @@ const nextConfig: NextConfig = {
         destination: "/courses/b1-german",
         permanent: true,
       },
+      {
+        source: "/courses/german-a1",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a1/",
+        destination: "/courses/a1-german",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a2",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a2/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-b1",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-b1/",
+        destination: "/courses/b1-german",
+        permanent: true,
+      },
+      {
+        source: "/category/uncategorized",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/category/uncategorized/",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/category/benefit-for-german",
+        destination: "/category/benefits-of-learning-german",
+        permanent: true,
+      },
+      {
+        source: "/category/benefit-for-german/",
+        destination: "/category/benefits-of-learning-german",
+        permanent: true,
+      },
+      {
+        source: "/category/tips-for-learning-german",
+        destination: "/category/german-learning-tips",
+        permanent: true,
+      },
+      {
+        source: "/category/tips-for-learning-german/",
+        destination: "/category/german-learning-tips",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav",
+        destination: "/about-gaurav-raghuvanshi",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav/",
+        destination: "/about-gaurav-raghuvanshi",
+        permanent: true,
+      },
     ];
   },
 };

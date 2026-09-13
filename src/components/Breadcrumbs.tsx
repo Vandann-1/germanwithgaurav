@@ -22,12 +22,17 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         name: "Home",
         item: "https://germanwithgaurav.com",
       },
-      ...items.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 2,
-        name: item.label,
-        item: item.href ? `https://germanwithgaurav.com${item.href}` : undefined,
-      })),
+      ...items.map((item, index) => {
+        const entry: { "@type": string; position: number; name: string; item?: string } = {
+          "@type": "ListItem",
+          position: index + 2,
+          name: item.label,
+        };
+        if (item.href) {
+          entry.item = `https://germanwithgaurav.com${item.href.startsWith("/") ? item.href : "/" + item.href}`;
+        }
+        return entry;
+      }),
     ],
   };
 

@@ -91,13 +91,20 @@ export default async function BlogArticlePage({ params }: PageProps) {
     dateModified: article.updatedDate,
     author: {
       "@type": "Person",
+      "@id": "https://germanwithgaurav.com/#gaurav-raghuvanshi",
       name: article.author.name,
-      url: "https://germanwithgaurav.com/about",
+      jobTitle: article.author.role,
+      url: "https://germanwithgaurav.com/about-gaurav-raghuvanshi",
     },
     publisher: {
       "@type": "EducationalOrganization",
+      "@id": "https://germanwithgaurav.com/#organization",
       name: "German With Gaurav",
       url: "https://germanwithgaurav.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://germanwithgaurav.com/logo.png",
+      },
     },
     mainEntityOfPage: `https://germanwithgaurav.com/blog/${article.slug}`,
   };

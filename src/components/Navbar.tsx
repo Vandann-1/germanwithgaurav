@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-gaurav-raghuvanshi" },
   { label: "Courses", href: "/courses" },
   { label: "Learn German", href: "/learn-german" },
   { label: "Blog", href: "/blog" },
@@ -71,7 +71,7 @@ export function Navbar() {
       <nav aria-label="Main Navigation">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-[72px] lg:h-[80px] flex items-center justify-between">
           
-          {/* Logo: Only Logo Emblem (No Text) */}
+          {/* Logo: Official Brand Logo */}
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
@@ -79,12 +79,12 @@ export function Navbar() {
             aria-label="German With Gaurav Home"
           >
             <Image
-              src="/favicon.png"
-              alt="German With Gaurav Logo"
-              width={52}
-              height={52}
+              src="/logo.png"
+              alt="German With Gaurav Official Logo"
+              width={160}
+              height={50}
               priority
-              className="h-11 sm:h-12 w-auto object-contain shrink-0 hover:opacity-90 transition-opacity"
+              className="h-10 sm:h-12 w-auto object-contain shrink-0 hover:opacity-90 transition-opacity"
             />
           </Link>
 

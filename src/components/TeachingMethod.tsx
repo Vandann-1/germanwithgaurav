@@ -227,6 +227,7 @@ export function TeachingMethod() {
                 return (
                   <div
                     key={sIdx}
+                    aria-hidden={activeIndex !== sIdx}
                     className="w-full min-w-full flex-shrink-0 grid grid-cols-2 gap-6 lg:gap-8"
                   >
                     {/* Active Step Card */}
@@ -287,6 +288,7 @@ export function TeachingMethod() {
                     {/* Next Step Preview Card (Clickable to advance) */}
                     <div
                       onClick={() => setActiveIndex(slide.nextIdx)}
+                      aria-hidden="true"
                       className="relative min-h-[340px] bg-slate-50/80 rounded-3xl p-7 lg:p-9 border-2 border-slate-200/80 hover:bg-amber-50/25 hover:border-amber-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer group"
                     >
                       {/* Decorative step watermark */}

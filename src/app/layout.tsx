@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Learn German Online with 19+ Years of Expertise | German With Gaurav",
+    default: "Learn German Online with Gaurav Raghuvanshi | German With Gaurav",
     template: "%s | German With Gaurav",
   },
   description: siteConfig.description,
@@ -62,20 +62,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Learn German Online with 19+ Years of Expertise | German With Gaurav",
+    title: "Learn German Online with Gaurav Raghuvanshi | German With Gaurav",
     description: siteConfig.description,
     images: [
       {
         url: "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",
         width: 1200,
         height: 630,
-        alt: "German With Gaurav - Master German with Confidence",
+        alt: "German With Gaurav - Learn German with Gaurav Raghuvanshi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Learn German Online with 19+ Years of Expertise | German With Gaurav",
+    title: "Learn German Online with Gaurav Raghuvanshi | German With Gaurav",
     description: siteConfig.description,
     images: [
       "https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp",

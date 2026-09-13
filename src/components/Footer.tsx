@@ -105,8 +105,8 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-[#08175e] hover:font-medium transition-colors block py-0.5">
-                    About Gaurav
+                  <Link href="/about-gaurav-raghuvanshi" className="hover:text-[#08175e] hover:font-medium transition-colors block py-0.5">
+                    About Gaurav Raghuvanshi
                   </Link>
                 </li>
                 <li>

@@ -95,7 +95,7 @@ export function AboutGauravSection() {
             {/* CTAs */}
             <div className="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
               <Link
-                href="/about"
+                href="/about-gaurav-raghuvanshi"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm bg-[#08175e] text-white hover:bg-[#050f42] transition-all shadow-sm"
               >
                 <span>Read Gaurav&apos;s Full Story</span>
