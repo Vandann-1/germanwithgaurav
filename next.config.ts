@@ -159,6 +159,117 @@ const nextConfig: NextConfig = {
         destination: "/about-gaurav-raghuvanshi",
         permanent: true,
       },
+      // Google Sitelinks & Legacy WordPress Slugs
+      {
+        source: "/faqs",
+        destination: "/faq",
+        permanent: true,
+      },
+      {
+        source: "/faqs/",
+        destination: "/faq",
+        permanent: true,
+      },
+      {
+        source: "/frequently-asked-questions",
+        destination: "/faq",
+        permanent: true,
+      },
+      {
+        source: "/frequently-asked-questions/",
+        destination: "/faq",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german-whats-the-difference",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german-whats-the-difference/",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german-what-is-the-difference",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german-what-is-the-difference/",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/a1-vs-a2-german/",
+        destination: "/blog/a1-vs-a2-german-whats-the-difference",
+        permanent: true,
+      },
+      {
+        source: "/beginners-guide-to-german-cases",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/beginners-guide-to-german-cases/",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/a-beginners-guide-to-german-cases",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/a-beginners-guide-to-german-cases/",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/german-cases",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/german-cases/",
+        destination: "/blog/beginners-guide-to-german-cases",
+        permanent: true,
+      },
+      {
+        source: "/new-a2-morning-batch",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/new-a2-morning-batch/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/a2-morning-batch",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/a2-morning-batch/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/blog/new-a2-morning-batch",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
+      {
+        source: "/blog/new-a2-morning-batch/",
+        destination: "/courses/a2-german",
+        permanent: true,
+      },
     ];
   },
 };

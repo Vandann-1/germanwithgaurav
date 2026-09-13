@@ -40,6 +40,15 @@ export const faqsData: FAQItem[] = [
       "Our curriculum is designed to give you thorough classroom engagement, active speaking drills, and comprehensive coverage of vocabulary and grammar to ensure long-term retention.",
   },
   {
+    id: "why-german-a1-takes-3-months",
+    category: "Duration",
+    question: "Why is the German A1 course taking 3 months to complete?",
+    directAnswer:
+      "The A1 course takes approximately 2.5 to 3 months because it covers over 100+ hours of live instruction, including the complete Netzwerk A1 textbook, active speaking drills, and Goethe-Zertifikat A1 exam preparation.",
+    detailedAnswer:
+      "Rushing through beginner German in 3 to 4 weeks leads to weak grammar retention and speaking hesitation. Our structured 100+ hour curriculum ensures you thoroughly master verb conjugations, article declensions (der/die/das), and everyday spoken German in small interactive batches of 5–7 students.",
+  },
+  {
     id: "what-if-miss-class",
     category: "Classes",
     question: "What if I miss a class?",
