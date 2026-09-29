@@ -33,155 +33,147 @@ export const faqsData: FAQItem[] = [
   {
     id: "how-many-hours-course",
     category: "Duration",
-    question: "How many hours course is this?",
+    question: "How many hours of instruction are included in each course?",
     directAnswer:
-      "Above 100 hours of detailed course where we finish the entire A1 Netzwerk Course Book + Exercises from Work book + Added Grammar Practice Material with colourful pictures.",
+      "Over 100+ hours of detailed live instruction covering the complete Netzwerk course book, workbook exercises, and dedicated grammar and conversation sheets.",
     detailedAnswer:
-      "Our curriculum is designed to give you thorough classroom engagement, active speaking drills, and comprehensive coverage of vocabulary and grammar to ensure long-term retention.",
+      "Our curriculum ensures deep classroom engagement, active speaking drills, and comprehensive coverage of vocabulary and grammar to build permanent fluency.",
   },
   {
     id: "why-german-a1-takes-3-months",
     category: "Duration",
-    question: "Why is the German A1 course taking 3 months to complete?",
+    question: "Why does the German A1 course take 2.5 to 3 months to complete?",
     directAnswer:
-      "The A1 course takes approximately 2.5 to 3 months because it covers over 100+ hours of live instruction, including the complete Netzwerk A1 textbook, active speaking drills, and Goethe-Zertifikat A1 exam preparation.",
+      "Our A1 course takes approximately 8 to 10 weeks (100+ hours) because we prioritize in-class conversational repetition and active dialogue drills over rushing through grammar rules.",
     detailedAnswer:
-      "Rushing through beginner German in 3 to 4 weeks leads to weak grammar retention and speaking hesitation. Our structured 100+ hour curriculum ensures you thoroughly master verb conjugations, article declensions (der/die/das), and everyday spoken German in small interactive batches of 5–7 students.",
+      "Rushing beginner German in 3 to 4 weeks leads to weak grammar retention and speaking hesitation. Our structured 100+ hour curriculum ensures you thoroughly master verb conjugations, article declensions (der/die/das), and everyday spoken German in small interactive batches of 5–7 students.",
   },
   {
     id: "what-if-miss-class",
     category: "Classes",
-    question: "What if I miss a class?",
+    question: "What happens if I miss a live class?",
     directAnswer:
-      "The video of that particular class will be shared with you for a limited time period.",
+      "Every live session is recorded in HD and shared with you for dedicated revision access.",
     detailedAnswer:
-      "Every live session is recorded in HD so you can catch up on explanations, class dialogues, and grammar exercises whenever work or personal emergencies arise.",
+      "If workplace obligations, university exams, or travel cause you to miss a class, you can watch the recording and ask Gaurav any clarifying questions before the next session.",
   },
   {
     id: "books-or-study-material",
     category: "Study Material",
-    question: "Will I get the books or any study material?",
+    question: "Will I receive textbooks and study material?",
     directAnswer:
-      "You’ll be provided with the PDFs of the licensed books + Digital Practice Material.",
+      "Yes. You receive digital licensed PDFs of the complete Netzwerk coursebook and workbook, plus exclusive color-coded practice sheets created by Gaurav.",
     detailedAnswer:
       "All necessary study guides, vocabulary sheets, audio tracks, and Goethe exam preparation drill sheets are provided digitally at no extra cost.",
   },
   {
-    id: "why-a1-taking-3-months",
-    category: "Duration",
-    question: "Why is the German A1 course taking 3 months to complete?",
-    directAnswer:
-      "The course is taking longer because of the repetition of exercises and repetitive dialogues in the class which will help you remember the words for longer and make the learning deep in the class itself. Repetition helps your learning and memory in the most efficient way.",
-    detailedAnswer:
-      "Unlike rush courses where concepts are forgotten within weeks, our in-class speaking drills and conversational practice make German intuitive and natural.",
-  },
-  {
     id: "how-many-classes-in-week",
     category: "Classes",
-    question: "How many classes will be held in a week?",
+    question: "How many classes are held each week?",
     directAnswer:
-      "The minimum number of classes will be 4 and maximum will be 5 classes of 60-90 mins each.",
+      "Each batch meets 4 to 5 times per week for 60 to 90 minutes per session.",
     detailedAnswer:
       "Regular class frequency ensures continuous momentum, preventing the decay of language concepts between sessions.",
   },
   {
     id: "students-in-a-batch",
     category: "Batch Size",
-    question: "How many students will be there in a batch?",
+    question: "How many students are in each batch?",
     directAnswer:
-      "The batch strength is usually 5-7 students per batch where each student gets personal attention while also keeping in mind the momentum of the course in case there is a person absent for the session.",
+      "Batch strength is strictly limited to 5 to 7 students per batch to guarantee high individual speaking time.",
     detailedAnswer:
-      "Small batches allow Gaurav to listen to every individual student speak, pinpoint pronunciation nuances, and answer every question in real time.",
+      "Small batches allow Gaurav to listen to every individual student speak, pinpoint pronunciation nuances, and provide immediate personalized correction.",
   },
   {
-    id: "certificate-after-course-els",
+    id: "certificate-after-course",
     category: "Certificates",
-    question: "Will I get a certificate after completing the course with ELS?",
+    question: "Will I receive an official certificate after completing the course?",
     directAnswer:
-      "No, Goethe Institute India is the authority that will provide you with the International Certificate, considering you have cleared their A1 Start Deutsch Exam.",
+      "German With Gaurav provides an academy Course Completion Certificate verifying hours and CEFR coverage. International official certificates are awarded by the Goethe-Institut upon passing their examinations.",
     detailedAnswer:
-      "We prepare you comprehensively for this international exam so you can pass with confidence and earn your globally recognized CEFR credentials.",
+      "We prepare you comprehensively for the Goethe-Zertifikat (A1, A2, B1) so you can register with the Goethe-Institut / Max Mueller Bhavan and clear all four exam modules with complete confidence.",
   },
   {
     id: "prepared-for-a1-goethe-start-exam",
     category: "Exams",
-    question: "Will I be prepared for the A1 Goethe Start Exam?",
+    question: "Will I be prepared for the official Goethe-Zertifikat exams?",
     directAnswer:
-      "Yes, you will be simultaneously prepared for the exam along with mastering the language. We emphasise on all aspects equally such as speaking, reading, listening and writing.",
+      "Yes. Official Goethe examination preparation is embedded directly into the weekly curriculum across all four skills: Hören, Lesen, Schreiben, and Sprechen.",
     detailedAnswer:
-      "Mock tests, past examination papers, and simulated speaking modules are embedded directly into the weekly course schedule.",
+      "Mock tests, past examination papers, letter-writing rubrics, and simulated group speaking modules are practiced under timed conditions.",
   },
   {
     id: "can-i-give-a2-directly",
     category: "Exams",
-    question: "Can I give A2 German Exam directly?",
-    directAnswer: "Yes, you can.",
+    question: "Can I join an A2 course directly without taking A1 at GWG?",
+    directAnswer:
+      "Yes, if you already have foundational A1 knowledge and grammar understanding.",
     detailedAnswer:
-      "If you already possess foundational A1 knowledge and grammar, you can take a diagnostic evaluation with Gaurav to join an A2 batch directly.",
+      "Gaurav conducts a complimentary 10-minute diagnostic consultation to assess your present knowledge and ensure you are placed in the ideal batch.",
   },
   {
     id: "how-many-levels-fluent",
     category: "Courses",
-    question: "How many levels does it take to be fluent in the language?",
+    question: "How many levels does it take to become conversationally fluent?",
     directAnswer:
-      "You will be speaking in German from Day 1 with ELS, however in order to add complicated topics to your language skills, one requires minimum B1.",
+      "You will speak German from your very first week with German With Gaurav. Independent conversational fluency for workplace and daily life is achieved at B1.",
     detailedAnswer:
-      "Day 1 spoken practice develops spontaneous conversational instincts, while advancing through A2 and B1 gives you command over professional communication and abstract discussions.",
+      "A1 gives you essential survival capability, A2 enables connected everyday conversations, and B1 gives you command over abstract discussions, career interviews, and workplace correspondence.",
   },
   {
     id: "levels-for-job-indian-german-companies",
     category: "Courses",
     question:
-      "How many levels a candidate should have in order to secure a job with Indian and German companies?",
+      "What German proficiency level is required to secure a job in Germany?",
     directAnswer:
-      "A Candidate should have somewhere between B1- C1 level of proficiency.",
+      "Most professional roles require between B1 and B2 proficiency, depending on the industry.",
     detailedAnswer:
-      "Technical and software roles often accept B1, while client-facing, healthcare, legal, and managerial roles generally require strong B2 or C1 proficiency.",
+      "IT and software engineers can often begin with A2/B1 in international companies, while mechanical engineers, healthcare practitioners, and business consultants generally require strong B2 or C1 certification.",
   },
   {
     id: "levels-proficiency-studying-germany",
     category: "Courses",
     question:
-      "How many levels of language proficiency an aspiring student requires for studying in Germany?",
+      "What German level is required for studying at a German university?",
     directAnswer:
-      "A student should have somewhere between A2-B1 level of proficiency in order to manage his daily life with ease.",
+      "English-taught degree programs typically recommend A2 to B1 for daily life and student jobs. German-taught degrees require C1.",
     detailedAnswer:
-      "For English-taught Master’s degrees, A2-B1 is recommended for visa interviews, student housing, and part-time jobs. For German-taught degrees, C1 is mandatory.",
+      "Even for English degrees, university career centers emphasize that B1 German is crucial for securing competitive working student (Werkstudent) jobs and internships to fund your living expenses in Germany.",
   },
   {
     id: "what-is-a1",
     category: "Courses",
-    question: "What is A1 German?",
+    question: "What is the CEFR A1 German level?",
     directAnswer:
-      "A1 German is the official beginner level of the Common European Framework of Reference for Languages (CEFR). It enables you to understand and speak familiar everyday expressions, introduce yourself, ask and answer basic personal questions, and conduct simple conversations in daily life.",
+      "A1 is the official beginner level of the Common European Framework of Reference for Languages (CEFR). It covers greetings, personal introductions, simple transactions, and essential sentence structures.",
     detailedAnswer:
-      "At German With Gaurav, our A1 course covers over 100+ hours of live instruction using the licensed Netzwerk curriculum. By the end of A1, you have a solid foundation and complete readiness for the official Goethe-Zertifikat A1 Start Deutsch exam.",
+      "At German With Gaurav, our 100+ hour A1 curriculum uses the licensed Netzwerk coursebook, giving you complete preparation for the Goethe-Zertifikat A1 Start Deutsch exam.",
   },
   {
     id: "what-is-a2",
     category: "Courses",
-    question: "What is A2 German?",
+    question: "What is the CEFR A2 German level?",
     directAnswer:
-      "A2 German is the elementary CEFR level where you move beyond survival phrases to understand frequently used sentences related to immediate personal relevance, such as employment, local geography, shopping, and family life.",
+      "A2 is the elementary CEFR level where you transition from basic survival phrases into connected daily conversations, past tenses, and workplace interactions.",
     detailedAnswer:
-      "Our A2 course introduces past tenses (Perfekt and Präteritum), the Dative case, two-way prepositions, reflexive verbs, and adjective declensions.",
+      "Our A2 course introduces the Dative case, two-way prepositions (Wechselpräpositionen), conversational past tense (Perfekt and Präteritum), and subordinate clauses (weil, dass).",
   },
   {
     id: "what-is-b1",
     category: "Courses",
-    question: "What is B1 German?",
+    question: "What is the CEFR B1 German level?",
     directAnswer:
-      "B1 German is the intermediate CEFR milestone representing independent language proficiency. At B1, you can comfortably understand standard German on work, school, and leisure matters, manage travel situations across Germany, and express thoughts on abstract and professional topics.",
+      "B1 is the pivotal intermediate milestone representing independent language proficiency for university entrance, Opportunity Cards (Chancenkarte), and corporate jobs.",
     detailedAnswer:
-      "B1 is the benchmark certificate required for German universities (Studienkolleg), vocational training (Ausbildung), Opportunity Cards (Chancenkarte), German Blue Cards, and permanent settlement.",
+      "At B1, you master the Passive Voice, Konjunktiv II for hypothetical polite discourse, complex connectors, and the full 4-module Goethe-Zertifikat B1 examination format.",
   },
   {
     id: "how-do-payments-and-fees-work",
     category: "Payments",
     question: "How do course fees and payments work?",
     directAnswer:
-      "Course fees are transparent and paid via secure UPI, Net Banking, credit/debit cards, or bank transfer. Installment options are available upon request.",
+      "Course fees are transparent and paid via secure UPI, Net Banking, credit/debit cards, or bank transfer with flexible installment options upon request.",
     detailedAnswer:
-      "You can attend a free 1-on-1 demo consultation before making any payment commitment. We do not have hidden charges; the fee covers all live classes, study materials, class recordings, and Goethe exam mock evaluations.",
+      "You can attend a free 1-on-1 demo consultation before making any financial commitment. There are zero hidden fees; the course fee covers all live sessions, licensed PDF books, HD recordings, and Goethe mock exams.",
   },
 ];

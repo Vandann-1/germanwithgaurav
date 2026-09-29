@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { CurriculumModule } from "@/data/coursesData";
-import { ChevronDown, BookOpen, Volume2, Mic, FileText, PenTool, Sparkles } from "lucide-react";
+import { ChevronDown, BookOpen, Volume2, Mic, PenTool, Sparkles } from "lucide-react";
 
 interface CourseCurriculumProps {
   curriculum: CurriculumModule[];
@@ -11,7 +11,7 @@ interface CourseCurriculumProps {
 
 export function CourseCurriculum({ curriculum, courseTitle }: CourseCurriculumProps) {
   const [openModules, setOpenModules] = useState<Record<string, boolean>>({
-    "01": true, // Open module 1 by default
+    "01": true,
   });
 
   const toggleModule = (number: string) => {
@@ -22,171 +22,178 @@ export function CourseCurriculum({ curriculum, courseTitle }: CourseCurriculumPr
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-white border-b border-slate-100" id="curriculum" aria-labelledby="curriculum-heading">
+    <section className="py-16 sm:py-24 bg-white border-b border-[#e5e2da]" id="curriculum" aria-labelledby="curriculum-heading">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
-            Detailed Syllabus
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#b91c1c]">
+            STRUCTURED SYLLABUS
           </span>
-          <h2 id="curriculum-heading" className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 id="curriculum-heading" className="text-3xl sm:text-4xl font-extrabold text-[#121826] tracking-tight">
             Complete {courseTitle} Curriculum
           </h2>
-          <p className="text-base text-slate-600">
-            A comprehensive, module-by-module breakdown covering grammar rules, spoken drills, vocabulary lists, and exam questions.
+          <p className="text-base text-[#475569]">
+            A thorough module-by-module syllabus covering grammar rules, spoken drills, listening comprehension, writing rubrics, and exam simulation.
           </p>
         </div>
 
         {/* Modules Accordion List */}
-        <div className="space-y-5">
+        <div className="space-y-4">
           {curriculum.map((mod) => {
             const isOpen = !!openModules[mod.number];
             return (
               <div
                 key={mod.number}
-                className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden transition-all"
+                className="bg-[#faf9f6] rounded-2xl border border-[#e5e2da] shadow-2xs overflow-hidden transition-all"
               >
                 {/* Module Trigger */}
                 <button
                   type="button"
                   onClick={() => toggleModule(mod.number)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-slate-50/80 transition-colors focus-visible:outline-2 focus-visible:outline-amber-500"
+                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-[#ede8df]/50 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#b91c1c] cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`module-panel-${mod.number}`}
                   id={`module-btn-${mod.number}`}
                 >
                   <div className="flex items-start sm:items-center gap-4">
-                    <span className="w-10 h-10 rounded-xl bg-slate-900 text-amber-400 font-mono font-bold text-sm flex items-center justify-center shrink-0">
+                    <span className="w-10 h-10 rounded-xl bg-[#121826] text-white font-mono font-bold text-xs flex items-center justify-center shrink-0">
                       {mod.number}
                     </span>
                     <div>
-                      <h3 className="text-lg font-bold text-slate-900 tracking-tight">
+                      <h3 className="text-base sm:text-lg font-bold text-[#121826] tracking-tight">
                         Module {mod.number}: {mod.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                      <p className="text-xs text-[#64748b] mt-0.5">
                         {mod.summary}
                       </p>
                     </div>
                   </div>
 
                   <div
-                    className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-600 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 bg-amber-100 text-amber-800" : ""
+                    className={`w-7 h-7 rounded-lg bg-white border border-[#e5e2da] flex items-center justify-center shrink-0 text-[#121826] transition-transform duration-200 ${
+                      isOpen ? "rotate-180 bg-[#ede8df]" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
-                {/* Module Content - Crawlable HTML */}
-                <div
-                  id={`module-panel-${mod.number}`}
-                  role="region"
-                  aria-labelledby={`module-btn-${mod.number}`}
-                  className={`${isOpen ? "block" : "hidden"} px-6 pb-6 pt-2 border-t border-slate-100 bg-slate-50/40`}
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                    
-                    {/* Grammar */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-amber-700 font-bold text-xs uppercase tracking-wider">
-                        <BookOpen className="w-4 h-4" />
-                        <span>Grammar Topics</span>
+                {/* Module Content */}
+                {isOpen && (
+                  <div
+                    id={`module-panel-${mod.number}`}
+                    role="region"
+                    aria-labelledby={`module-btn-${mod.number}`}
+                    className="px-6 pb-6 pt-2 border-t border-[#e5e2da] bg-white"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+                      
+                      {/* Grammar */}
+                      <div className="bg-[#faf9f6] p-4 rounded-xl border border-[#e5e2da]">
+                        <div className="flex items-center gap-2 mb-2 text-[#b91c1c] font-bold text-xs uppercase tracking-wider">
+                          <BookOpen className="w-4 h-4" />
+                          <span>Grammar Focus</span>
+                        </div>
+                        <ul className="space-y-1.5 text-xs text-[#334155]">
+                          {mod.grammar.map((g, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#b91c1c] mt-1.5 shrink-0" />
+                              <span>{g}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.grammar.map((g, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                            <span>{g}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
-                    {/* Vocabulary */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-blue-700 font-bold text-xs uppercase tracking-wider">
-                        <Sparkles className="w-4 h-4" />
-                        <span>Vocabulary Themes</span>
+                      {/* Vocabulary */}
+                      <div className="bg-[#faf9f6] p-4 rounded-xl border border-[#e5e2da]">
+                        <div className="flex items-center gap-2 mb-2 text-[#121826] font-bold text-xs uppercase tracking-wider">
+                          <Sparkles className="w-4 h-4 text-[#d97706]" />
+                          <span>Vocabulary Topics</span>
+                        </div>
+                        <ul className="space-y-1.5 text-xs text-[#334155]">
+                          {mod.vocabulary.map((v, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#d97706] mt-1.5 shrink-0" />
+                              <span>{v}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.vocabulary.map((v, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0" />
-                            <span>{v}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
-                    {/* Speaking & Pronunciation */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
-                        <Mic className="w-4 h-4" />
-                        <span>Speaking & Oral Drills</span>
+                      {/* Speaking */}
+                      <div className="bg-[#faf9f6] p-4 rounded-xl border border-[#e5e2da]">
+                        <div className="flex items-center gap-2 mb-2 text-[#15803d] font-bold text-xs uppercase tracking-wider">
+                          <Mic className="w-4 h-4" />
+                          <span>Speaking &amp; Roleplays</span>
+                        </div>
+                        <ul className="space-y-1.5 text-xs text-[#334155]">
+                          {mod.speaking.map((s, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#15803d] mt-1.5 shrink-0" />
+                              <span>{s}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.speaking.map((s, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                            <span>{s}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
-                    {/* Listening Comprehension */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-purple-700 font-bold text-xs uppercase tracking-wider">
-                        <Volume2 className="w-4 h-4" />
-                        <span>Listening Practice</span>
+                      {/* Listening & Reading */}
+                      <div className="bg-[#faf9f6] p-4 rounded-xl border border-[#e5e2da]">
+                        <div className="flex items-center gap-2 mb-2 text-[#475569] font-bold text-xs uppercase tracking-wider">
+                          <Volume2 className="w-4 h-4" />
+                          <span>Listening &amp; Reading Tasks</span>
+                        </div>
+                        <ul className="space-y-1.5 text-xs text-[#334155]">
+                          {mod.listening.map((l, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#475569] mt-1.5 shrink-0" />
+                              <span>[Audio] {l}</span>
+                            </li>
+                          ))}
+                          {mod.reading.map((r, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#475569] mt-1.5 shrink-0" />
+                              <span>[Text] {r}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.listening.map((l, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0" />
-                            <span>{l}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
-                    {/* Reading Comprehension */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-rose-700 font-bold text-xs uppercase tracking-wider">
-                        <FileText className="w-4 h-4" />
-                        <span>Reading Materials</span>
+                      {/* Writing & Drills */}
+                      <div className="bg-[#faf9f6] p-4 rounded-xl border border-[#e5e2da] md:col-span-2">
+                        <div className="flex items-center gap-2 mb-2 text-[#b91c1c] font-bold text-xs uppercase tracking-wider">
+                          <PenTool className="w-4 h-4" />
+                          <span>Writing &amp; Goethe Practice Drills</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#334155]">
+                          <div>
+                            <p className="font-bold text-[#121826] mb-1">Writing Assignments:</p>
+                            <ul className="space-y-1">
+                              {mod.writing.map((w, idx) => (
+                                <li key={idx} className="flex items-start gap-1.5">
+                                  <span>•</span>
+                                  <span>{w}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-bold text-[#121826] mb-1">Interactive Class Drills:</p>
+                            <ul className="space-y-1">
+                              {mod.practice.map((p, idx) => (
+                                <li key={idx} className="flex items-start gap-1.5">
+                                  <span>•</span>
+                                  <span>{p}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.reading.map((r, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0" />
-                            <span>{r}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
-                    {/* Writing & Practice */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2 text-amber-800 font-bold text-xs uppercase tracking-wider">
-                        <PenTool className="w-4 h-4" />
-                        <span>Writing & Exam Practice</span>
-                      </div>
-                      <ul className="space-y-1.5 text-xs text-slate-700">
-                        {mod.writing.concat(mod.practice).map((w, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-1.5 shrink-0" />
-                            <span>{w}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
-
                   </div>
-                </div>
-
+                )}
               </div>
             );
           })}

@@ -74,24 +74,24 @@ export default function CoursesCatalogPage() {
       <TeachingMethod />
 
       {/* Level Comparison Guide Banner */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200">
+      <section className="py-16 bg-[var(--sand-50)] border-b border-[var(--sand-300)]">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+          <h2 className="text-2xl sm:text-3xl font-black text-charcoal-900">
             Not sure which level is right for you?
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-charcoal-600 max-w-xl mx-auto">
             Read our comprehensive guide on CEFR language levels, or schedule a free 10-minute level diagnostic call with Gaurav.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
               href="/learn-german"
-              className="px-6 py-3 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-colors"
+              className="px-6 py-3 rounded-xl bg-charcoal-900 text-white font-bold text-sm hover:bg-charcoal-800 transition-colors shadow-xs"
             >
               Explore German Levels Guide
             </Link>
             <Link
-              href="/book-a-free-demo"
-              className="px-6 py-3 rounded-xl bg-amber-400 text-slate-950 font-bold text-sm hover:bg-amber-500 transition-colors shadow"
+              href="/book-demo"
+              className="px-6 py-3 rounded-xl bg-amber-400 text-charcoal-950 font-bold text-sm hover:bg-amber-500 transition-colors shadow-sm"
             >
               Book Free Level Assessment
             </Link>

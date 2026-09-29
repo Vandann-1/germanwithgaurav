@@ -23,7 +23,7 @@ export default function LearnGermanPage() {
       title: "Beginner German",
       hours: "80–100 Hours",
       target: "Spouse Visas, Foundation, Everyday Phrases",
-      slug: "a1-german",
+      slug: "a1",
       description:
         "Understand and use familiar everyday expressions and very basic phrases. Introduce yourself, ask where someone lives, and order food in a café.",
       topics: ["Alphabet & phonetics", "Present tense verbs", "Definite/indefinite articles", "Accusative case basics", "Numbers & time"],
@@ -33,7 +33,7 @@ export default function LearnGermanPage() {
       title: "Elementary German",
       hours: "100–120 Hours",
       target: "Daily Life in Germany, Internships, Simple Work",
-      slug: "a2-german",
+      slug: "a2",
       description:
         "Understand sentences related to areas of immediate relevance (family, shopping, employment). Describe past events and participate in everyday work conversations.",
       topics: ["Dative case & Wechselpräpositionen", "Perfekt & Präteritum past tenses", "Reflexive verbs", "Adjective declensions", "Subordinate clauses (weil, dass)"],
@@ -43,7 +43,7 @@ export default function LearnGermanPage() {
       title: "Intermediate German",
       hours: "120–150 Hours",
       target: "Studienkolleg, Blue Card, Chancenkarte, PR",
-      slug: "b1-german",
+      slug: "b1",
       description:
         "Deal with most travel and living situations in DACH nations. Express opinions on abstract topics, write connected texts, and converse independently.",
       topics: ["Passive voice (Passiv)", "Konjunktiv II (diplomacy, wishes)", "Relative clauses in all cases", "Genitive prepositions", "Goethe B1 4-module test mastery"],

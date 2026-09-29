@@ -36,7 +36,7 @@ export interface CourseDetail {
 
 export const coursesData: CourseDetail[] = [
   {
-    slug: "a1-german",
+    slug: "a1",
     level: "A1",
     badge: "Beginner Level (CEFR)",
     title: "A1 German Language Course",
@@ -150,11 +150,11 @@ export const coursesData: CourseDetail[] = [
           "Every session is recorded and shared with enrolled students for a dedicated access period. You can watch the recording and ask Gaurav any questions before the next class.",
       },
     ],
-    nextCourseSlug: "a2-german",
+    nextCourseSlug: "a2",
     nextCourseName: "A2 German Course",
   },
   {
-    slug: "a2-german",
+    slug: "a2",
     level: "A2",
     badge: "Elementary Level (CEFR)",
     title: "A2 German Language Course",
@@ -262,11 +262,11 @@ export const coursesData: CourseDetail[] = [
           "Absolutely. With our strict limit of 5 to 7 students per batch, every learner participates in active dialogues, debates, and roleplays during every single session.",
       },
     ],
-    nextCourseSlug: "b1-german",
+    nextCourseSlug: "b1",
     nextCourseName: "B1 German Course",
   },
   {
-    slug: "b1-german",
+    slug: "b1",
     level: "B1",
     badge: "Intermediate Level (CEFR)",
     title: "B1 German Language Course",

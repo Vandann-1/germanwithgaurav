@@ -103,7 +103,7 @@ export default function PeoplePage() {
 
                 <div className="pt-2 flex items-center gap-4">
                   <Link
-                    href="/book-a-free-demo"
+                    href="/book-demo"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors shadow"
                   >
                     <span>Connect for Consultation</span>

@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, MessageSquare, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Compass, Award, Users } from "lucide-react";
 
 export function AboutGauravSection() {
   return (
-    <section className="py-14 sm:py-20 bg-gradient-to-b from-white via-slate-50/40 to-white border-b border-slate-100 overflow-hidden">
+    <section className="py-16 sm:py-24 bg-[#f7f5f0] border-b border-[#e5e2da]" aria-labelledby="about-gaurav-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column: Photograph (5 cols) */}
+          {/* Left Column: Photograph with Academic Frame (lg: 5 cols) */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-xs sm:max-w-sm">
-              <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
-                <div className="relative aspect-[4/5] w-full bg-slate-100">
+            <div className="w-full max-w-sm">
+              <div className="bg-white rounded-3xl border border-[#e5e2da] shadow-lg p-3 sm:p-4">
+                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-[#ede8df]">
                   <Image
                     src="https://germanwithgaurav.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-03-at-16.37.13.webp"
                     alt="Gaurav Raghuvanshi - German Language Teacher with 19+ Years of Experience"
@@ -23,90 +23,83 @@ export function AboutGauravSection() {
                   />
                 </div>
 
-                {/* Clean Integrated Credential Bar */}
-                <div className="p-4 bg-[#08175e] text-white flex items-center justify-between">
+                <div className="mt-3.5 p-3.5 bg-[#faf9f6] rounded-xl border border-[#e5e2da] flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-semibold text-amber-300">Teaching German Since 2005</p>
-                    <p className="text-sm font-bold text-white">19+ Years of Classroom Mentorship</p>
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-[#b91c1c]">Teaching German Since 2005</p>
+                    <p className="text-sm font-bold text-[#121826]">Gaurav Raghuvanshi</p>
                   </div>
-                  <div className="w-9 h-9 rounded-xl bg-amber-400 text-slate-950 font-black flex items-center justify-center text-sm shrink-0">
+                  <span className="w-9 h-9 rounded-lg bg-[#121826] text-white font-mono font-black text-xs flex items-center justify-center shrink-0">
                     19+
-                  </div>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Teaching Philosophy & Copy (7 cols) */}
-          <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
+          {/* Right Column: Editorial Narrative & Pillars (lg: 7 cols) */}
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-semibold tracking-wide">
-                <span>About Your Lead Educator</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
-                Meet Gaurav Raghuvanshi <br />
-                <span className="text-amber-600">Your German Language Mentor</span>
+              <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#b91c1c]">
+                FOUNDER &amp; LEAD INSTRUCTOR
+              </span>
+              <h2 id="about-gaurav-heading" className="text-3xl sm:text-4xl font-extrabold text-[#121826] tracking-tight leading-tight">
+                Meet Gaurav Raghuvanshi
               </h2>
+              <p className="text-base sm:text-lg font-semibold text-[#b91c1c]">
+                German Language Teacher &amp; Mentor with 19+ Years of Experience
+              </p>
             </div>
 
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              I know firsthand how frustrating it can be to study for months and still freeze the moment someone greets you with <em>&ldquo;Wie geht es Ihnen?&rdquo;</em>
+            <p className="text-sm sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              For nearly two decades, Gaurav has mentored engineers, doctors, university aspirants, and corporate professionals across India and abroad. His teaching philosophy eliminates the dread of German grammar by framing cases, declensions, and sentence structures as clear, logical patterns.
             </p>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Fluency doesn&apos;t come from memorizing dry grammar lists or swiping endlessly on apps. It comes from a supportive, structured environment where you speak actively in small batches of 5–7 students and receive daily individual feedback.
+            <p className="text-sm sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Unlike large coaching centres with 25+ students per class, every batch at German With Gaurav is strictly capped at <strong>5 to 7 learners</strong>. This ensures high daily student talk-time, direct pronunciation coaching, and rigorous mock test correction.
             </p>
 
-            {/* Philosophy Pillars - Clean, quiet academic grid */}
+            {/* Philosophy Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-left">
-              <div className="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-2xs">
-                <MessageSquare className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Practical German</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Real-life conversations and practical vocabulary for daily situations.</p>
-                </div>
+              <div className="bg-white p-4 rounded-xl border border-[#e5e2da] shadow-2xs">
+                <Compass className="w-4 h-4 text-[#b91c1c] mb-1.5" />
+                <h3 className="text-sm font-bold text-[#121826]">Logical Case Blueprints</h3>
+                <p className="text-xs text-[#64748b] mt-0.5">Demystifying Nominative, Accusative, and Dative cases with relatable analogies.</p>
               </div>
 
-              <div className="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-2xs">
-                <Compass className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Intuitive Grammar Logic</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Complex German sentence rules deconstructed into simple patterns.</p>
-                </div>
+              <div className="bg-white p-4 rounded-xl border border-[#e5e2da] shadow-2xs">
+                <Users className="w-4 h-4 text-[#b91c1c] mb-1.5" />
+                <h3 className="text-sm font-bold text-[#121826]">Small-Batch Philosophy</h3>
+                <p className="text-xs text-[#64748b] mt-0.5">Strictly 5–7 learners per batch guaranteeing that every student speaks every day.</p>
               </div>
 
-              <div className="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-2xs">
-                <Award className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Speaking Confidence</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Small batches (5–7 students) ensuring high personal talk-time every day.</p>
-                </div>
+              <div className="bg-white p-4 rounded-xl border border-[#e5e2da] shadow-2xs">
+                <MessageSquare className="w-4 h-4 text-[#b91c1c] mb-1.5" />
+                <h3 className="text-sm font-bold text-[#121826]">Active Spoken German</h3>
+                <p className="text-xs text-[#64748b] mt-0.5">Roleplays, situational dialogues, and immediate verbal correction in every class.</p>
               </div>
 
-              <div className="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-2xs">
-                <HeartHandshake className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Personalized Guidance</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Line-by-line feedback on your pronunciation, writing, and homework.</p>
-                </div>
+              <div className="bg-white p-4 rounded-xl border border-[#e5e2da] shadow-2xs">
+                <Award className="w-4 h-4 text-[#b91c1c] mb-1.5" />
+                <h3 className="text-sm font-bold text-[#121826]">Goethe-Zertifikat Focus</h3>
+                <p className="text-xs text-[#64748b] mt-0.5">Module-by-module simulation of official examinations with personalized feedback.</p>
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link
-                href="/about-gaurav-raghuvanshi"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm bg-[#08175e] text-white hover:bg-[#050f42] transition-all shadow-sm"
+                href="/about"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-[#121826] text-white hover:bg-[#b91c1c] transition-colors shadow-xs"
               >
-                <span>Read Gaurav&apos;s Full Story</span>
-                <ArrowRight className="w-4 h-4 text-amber-400" />
+                <span>Read Full Teaching Journey</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/book-a-free-demo"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-colors"
+                href="/book-demo"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-[#121826] bg-[#ede8df] hover:bg-[#e2dcd0] border border-[#d5d0c5] transition-colors"
               >
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Book a Free Demo Session</span>
+                <CheckCircle2 className="w-4 h-4 text-[#15803d]" />
+                <span>Book 1-on-1 Demo Session</span>
               </Link>
             </div>
 

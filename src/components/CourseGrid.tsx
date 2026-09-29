@@ -10,22 +10,22 @@ interface CourseGridProps {
 
 export function CourseGrid({
   showHeading = true,
-  heading = "Learn German Step by Step",
-  subheading = "Progress smoothly from absolute beginner (A1) to confident independent speaker (B1) with our structured, small-batch system.",
+  heading = "Structured German Courses: A1 to B1",
+  subheading = "Progress smoothly from absolute beginner to confident independent speaker with our live, small-batch curriculum.",
 }: CourseGridProps) {
   return (
-    <section className="py-16 sm:py-24 bg-slate-50/70 border-b border-slate-200/80">
+    <section className="py-16 sm:py-24 bg-[#faf9f6] border-b border-[#e5e2da]" aria-labelledby="courses-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {showHeading && (
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
-              Our Core Curriculum
+            <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#b91c1c]">
+              LIVE INSTRUCTIONAL CURRICULUM
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            <h2 id="courses-heading" className="text-3xl sm:text-4xl font-extrabold text-[#121826] tracking-tight">
               {heading}
             </h2>
-            <p className="text-base sm:text-lg text-slate-600">
+            <p className="text-base sm:text-lg text-[#475569]">
               {subheading}
             </p>
           </div>

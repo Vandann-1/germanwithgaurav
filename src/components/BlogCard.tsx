@@ -10,54 +10,54 @@ interface BlogCardProps {
 
 export function BlogCard({ article }: BlogCardProps) {
   return (
-    <article className="flex flex-col justify-between bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-200 overflow-hidden group">
+    <article className="flex flex-col justify-between bg-white rounded-2xl border border-[#e5e2da] shadow-xs hover:shadow-md hover:border-[#b91c1c]/50 transition-all duration-200 overflow-hidden group">
       <div>
         {/* Featured Image */}
-        <div className="relative aspect-video w-full bg-slate-100 overflow-hidden">
+        <div className="relative aspect-[16/10] w-full bg-[#ede8df] overflow-hidden">
           <Image
             src={article.featuredImage}
             alt={article.imageAlt || article.title}
             fill
             sizes="(max-width: 768px) 100vw, 400px"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover group-hover:scale-103 transition-transform duration-300"
             loading="lazy"
           />
-          <span className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-xs text-amber-400 text-[11px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+          <span className="absolute top-3 left-3 bg-[#121826]/90 backdrop-blur-xs text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
             {article.category}
           </span>
         </div>
 
         {/* Content */}
-        <div className="p-5 sm:p-6">
-          <div className="flex items-center gap-3 text-xs text-slate-400 mb-2">
+        <div className="p-6">
+          <div className="flex items-center gap-3 text-xs text-[#64748b] mb-2.5">
             <span className="flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5" />
-              {article.publishedDate}
+              <Calendar className="w-3.5 h-3.5 text-[#b91c1c]" />
+              <span>{article.publishedDate}</span>
             </span>
             <span>•</span>
             <span className="flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5" />
-              {article.readTime}
+              <Clock className="w-3.5 h-3.5 text-[#64748b]" />
+              <span>{article.readTime}</span>
             </span>
           </div>
 
-          <h3 className="text-lg font-bold text-slate-900 tracking-tight leading-snug group-hover:text-amber-700 transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold text-[#121826] tracking-tight leading-snug group-hover:text-[#b91c1c] transition-colors line-clamp-2">
             <Link href={`/blog/${article.slug}`}>
               {article.title}
             </Link>
           </h3>
 
-          <p className="text-xs sm:text-sm text-slate-600 mt-2.5 line-clamp-3 leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#475569] mt-2.5 line-clamp-3 leading-relaxed">
             {article.excerpt}
           </p>
         </div>
       </div>
 
       {/* Footer link */}
-      <div className="px-5 sm:px-6 pb-5 pt-0">
+      <div className="px-6 pb-6 pt-0">
         <Link
           href={`/blog/${article.slug}`}
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-amber-700 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#121826] group-hover:text-[#b91c1c] transition-colors"
         >
           <span>Read Full Guide</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

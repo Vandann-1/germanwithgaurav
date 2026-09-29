@@ -19,6 +19,284 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Clean Information Architecture Redirects
+      {
+        source: "/book-a-free-demo",
+        destination: "/book-demo",
+        permanent: true,
+      },
+      {
+        source: "/book-a-free-demo/",
+        destination: "/book-demo",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav-raghuvanshi",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav-raghuvanshi/",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/about-gaurav/",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/terms-and-conditions",
+        destination: "/terms",
+        permanent: true,
+      },
+      {
+        source: "/terms-and-conditions/",
+        destination: "/terms",
+        permanent: true,
+      },
+      {
+        source: "/learning-path",
+        destination: "/learning-paths",
+        permanent: true,
+      },
+      {
+        source: "/learning-path/",
+        destination: "/learning-paths",
+        permanent: true,
+      },
+      {
+        source: "/methodology",
+        destination: "/method",
+        permanent: true,
+      },
+      {
+        source: "/methodology/",
+        destination: "/method",
+        permanent: true,
+      },
+      {
+        source: "/the-method",
+        destination: "/method",
+        permanent: true,
+      },
+      {
+        source: "/the-method/",
+        destination: "/method",
+        permanent: true,
+      },
+      {
+        source: "/resource",
+        destination: "/resources",
+        permanent: true,
+      },
+      {
+        source: "/resource/",
+        destination: "/resources",
+        permanent: true,
+      },
+
+      // Course URL Normalization to /courses/a1, /courses/a2, /courses/b1
+      {
+        source: "/courses/a1-german",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/courses/a1-german/",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a1",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a1/",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/a1",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/a1/",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/a1-german",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/a1-german/",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a1",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a1/",
+        destination: "/courses/a1",
+        permanent: true,
+      },
+
+      {
+        source: "/courses/a2-german",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/courses/a2-german/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a2",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-a2/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/a2",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/a2/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/a2-german",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/a2-german/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a2",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/course/german-a2/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/new-a2-morning-batch",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/new-a2-morning-batch/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/a2-morning-batch",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/a2-morning-batch/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/blog/new-a2-morning-batch",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+      {
+        source: "/blog/new-a2-morning-batch/",
+        destination: "/courses/a2",
+        permanent: true,
+      },
+
+      {
+        source: "/courses/b1-german",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/courses/b1-german/",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-b1",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/courses/german-b1/",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/b1",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/b1/",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/b1-german",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/b1-german/",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/german-b1",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+      {
+        source: "/course/german-b1/",
+        destination: "/courses/b1",
+        permanent: true,
+      },
+
+      {
+        source: "/course",
+        destination: "/courses",
+        permanent: true,
+      },
+      {
+        source: "/course/",
+        destination: "/courses",
+        permanent: true,
+      },
+
+      // Legacy WordPress & Sitelink Redirects
       {
         source: "/people-at-gwg",
         destination: "/people",
@@ -75,156 +353,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/course",
-        destination: "/courses",
-        permanent: true,
-      },
-      {
-        source: "/course/",
-        destination: "/courses",
-        permanent: true,
-      },
-      {
-        source: "/course/a1-german",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a1-german/",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a2-german",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a2-german/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/b1-german",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/b1-german/",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a1",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a1/",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a2",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/a2/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/b1",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/b1/",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-a1",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-a1/",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-a2",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-a2/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-b1",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/german-b1/",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/course/:path*",
-        destination: "/courses/:path*",
-        permanent: true,
-      },
-      {
-        source: "/courses/a1",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/a2",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/b1",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-a1",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-a1/",
-        destination: "/courses/a1-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-a2",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-a2/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-b1",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
-        source: "/courses/german-b1/",
-        destination: "/courses/b1-german",
-        permanent: true,
-      },
-      {
         source: "/category/uncategorized",
         destination: "/blog",
         permanent: true,
@@ -254,17 +382,6 @@ const nextConfig: NextConfig = {
         destination: "/category/german-learning-tips",
         permanent: true,
       },
-      {
-        source: "/about-gaurav",
-        destination: "/about-gaurav-raghuvanshi",
-        permanent: true,
-      },
-      {
-        source: "/about-gaurav/",
-        destination: "/about-gaurav-raghuvanshi",
-        permanent: true,
-      },
-      // Google Sitelinks & Legacy WordPress Slugs
       {
         source: "/faqs",
         destination: "/faq",
@@ -373,36 +490,6 @@ const nextConfig: NextConfig = {
       {
         source: "/german-cases/",
         destination: "/blog/beginners-guide-to-german-cases",
-        permanent: true,
-      },
-      {
-        source: "/new-a2-morning-batch",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/new-a2-morning-batch/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/a2-morning-batch",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/a2-morning-batch/",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/blog/new-a2-morning-batch",
-        destination: "/courses/a2-german",
-        permanent: true,
-      },
-      {
-        source: "/blog/new-a2-morning-batch/",
-        destination: "/courses/a2-german",
         permanent: true,
       },
     ];

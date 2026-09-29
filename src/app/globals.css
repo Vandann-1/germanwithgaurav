@@ -1,28 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
-  --color-oxford-navy: #08175e;
-  --color-oxford-navy-dark: #050f42;
-  --color-oxford-navy-light: #0d2282;
+  --font-sans: var(--font-inter);
+  --font-inter: var(--font-inter);
+  --font-montserrat: var(--font-montserrat);
+  --font-dmsans: 'DM Sans', var(--font-inter);
+  --color-warm-white: #faf9f6;
+  --color-sand-50: #fbfbf9;
+  --color-sand-100: #f7f5f0;
+  --color-sand-200: #ede8df;
+  --color-sand-300: #e2dcd0;
+  --color-charcoal-900: #121826;
+  --color-charcoal-800: #1e293b;
+  --color-charcoal-700: #334155;
+  --color-charcoal-600: #475569;
+  --color-charcoal-500: #64748b;
+  --color-academy-navy: #0b1a4a;
+  --color-academy-navy-dark: #071133;
+  --color-academy-navy-light: #162a6b;
+  --color-german-red: #b91c1c;
+  --color-german-red-dark: #991b1b;
+  --color-german-red-subtle: #fef2f2;
+  --color-german-gold: #d97706;
+  --color-german-gold-subtle: #fef3c7;
 }
 
 @layer base {
   :root {
-    --brand-navy: #08175e;
-    --brand-navy-light: #0d2282;
-    --brand-oxford: #08175e;
-    --brand-gold: #f59e0b;
-    --brand-gold-hover: #d97706;
-    --brand-gold-subtle: #fef3c7;
-    --brand-red: #dc2626;
-    --brand-slate-50: #f8fafc;
-    --brand-slate-100: #f1f5f9;
-    --brand-slate-200: #e2e8f0;
-    --brand-slate-600: #475569;
-    --brand-slate-800: #1e293b;
-    --brand-slate-900: #0f172a;
+    --bg-page: #faf9f6;
+    --text-primary: #121826;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-subtle: #e5e2da;
+    --border-strong: #d5d0c5;
+    --accent-red: #b91c1c;
+    --accent-navy: #0b1a4a;
   }
 
   html {
@@ -30,15 +42,18 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
     max-width: 100vw;
+    background-color: #faf9f6;
+    color: #121826;
   }
 
   body {
-    background-color: #ffffff;
-    color: #1e293b;
-    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #faf9f6;
+    color: #121826;
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.011em;
     overflow-x: hidden;
     max-width: 100vw;
   }
@@ -48,89 +63,178 @@
     max-width: 100vw;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.02em;
+  /* Main H1 / Hero: Montserrat (700–800) */
+  h1 {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #121826;
   }
 
-  .font-serif {
-    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+  /* H2 / Section headings: Montserrat (600–700) */
+  h2 {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #121826;
+  }
+
+  /* H3 / Card titles: Inter (600) */
+  h3 {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #121826;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #121826;
+  }
+
+  p {
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  /* Buttons: Montserrat (600–700) */
+  button,
+  .btn,
+  .btn-font {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+  }
+
+  /* Small text / labels: Inter (500) */
+  small,
+  label {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+  }
+
+  /* German words / quotes: DM Sans or Inter (500) */
+  blockquote,
+  cite,
+  .font-quote,
+  .german-quote,
+  [data-german],
+  .german-text {
+    font-family: var(--font-dmsans), var(--font-inter), sans-serif;
+    font-weight: 500;
+  }
+
+  /* Numbers / course levels: Montserrat (700–800) */
+  .font-level,
+  .course-level,
+  [data-level] {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 800;
   }
 
   ::selection {
-    background-color: #e0e7ff;
-    color: #08175e;
+    background-color: #fce7f3;
+    color: #991b1b;
   }
 
   /* Accessible focus states */
   *:focus-visible {
-    outline: 2px solid #08175e;
+    outline: 2px solid #b91c1c;
     outline-offset: 2px;
   }
 }
 
-.blueprint-grid {
+/* Typography Utility Classes matching strict design system */
+.font-montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', var(--font-inter), sans-serif;
+}
+
+.font-h1, .hero-title {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 800;
+}
+
+.font-h2 {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+}
+
+.font-h3 {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+}
+
+.font-btn {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+}
+
+.font-german {
+  font-family: 'DM Sans', var(--font-inter), sans-serif;
+  font-weight: 500;
+}
+
+/* Subtle academic architectural grid */
+.academic-grid {
   background-image: 
-    linear-gradient(to right, rgba(148, 163, 184, 0.45) 1.5px, transparent 1.5px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.45) 1.5px, transparent 1.5px);
-  background-size: 80px 80px;
+    linear-gradient(to right, rgba(226, 220, 208, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 220, 208, 0.4) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 @media (min-width: 768px) {
-  .blueprint-grid {
-    background-size: 96px 96px;
+  .academic-grid {
+    background-size: 80px 80px;
   }
 }
 
-.german-gradient-text {
-  background: linear-gradient(135deg, #08175e 0%, #1e3a8a 50%, #b45309 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Restrained German Tricolor Indicator */
+.german-tricolor-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
 }
 
-.gold-gradient-bg {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+.german-tricolor-bar span:nth-child(1) {
+  width: 16px;
+  height: 3px;
+  background-color: #121826;
+  border-radius: 9999px;
 }
 
-.navy-gradient-bg {
-  background: linear-gradient(135deg, #08175e 0%, #050f42 100%);
+.german-tricolor-bar span:nth-child(2) {
+  width: 16px;
+  height: 3px;
+  background-color: #b91c1c;
+  border-radius: 9999px;
 }
 
-.subtle-glass {
-  background: rgba(255, 255, 255, 0.85);
+.german-tricolor-bar span:nth-child(3) {
+  width: 16px;
+  height: 3px;
+  background-color: #d97706;
+  border-radius: 9999px;
+}
+
+/* Soft glass navigation */
+.academic-nav-glass {
+  background: rgba(250, 249, 246, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.2s ease-out forwards;
 }
 
 @keyframes menuSlideDown {
   from {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;
@@ -139,6 +243,5 @@
 }
 
 .animate-menu-open {
-  animation: menuSlideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: menuSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-

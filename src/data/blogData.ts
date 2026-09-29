@@ -129,7 +129,7 @@ Studies across European recruitment networks consistently indicate that internat
           "With German With Gaurav's structured small-batch classes (4–5 hours weekly + self-study), dedicated professionals routinely reach B1 within 6 to 8 months.",
       },
     ],
-    relatedCourses: ["a2-german", "b1-german"],
+    relatedCourses: ["a2", "b1"],
     relatedArticles: ["german-language-levels-explained-a1-to-c2", "how-long-does-it-take-to-reach-b1-level"],
   },
   {
@@ -209,7 +209,7 @@ Whether you take the Goethe-Zertifikat, telc, TestDaF, or ÖSD, your certificate
           "Goethe exams allocate 25 points to each of the four modules (Hören, Lesen, Schreiben, Sprechen) for a total of 100 points. You must achieve at least 60% overall (and 60% per module in B1) to receive your certificate.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german", "b1-german"],
+    relatedCourses: ["a1", "a2", "b1"],
     relatedArticles: ["how-much-german-do-you-need-to-work-in-germany", "how-long-does-it-take-to-reach-b1-level"],
   },
   {
@@ -300,7 +300,7 @@ Many learners sail through A1 greetings and food vocabulary, only to hit a wall 
           "The pass mark is 60% per module. When you train with past question papers, active speaking roleplays, and formal letter templates, the exam becomes predictable and manageable.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german", "b1-german"],
+    relatedCourses: ["a1", "a2", "b1"],
     relatedArticles: ["how-much-german-do-you-need-to-work-in-germany", "german-language-levels-explained-a1-to-c2"],
   },
   {
@@ -366,7 +366,7 @@ Germany offers generous standard annual paid leave (30 days/year), strict limits
           "German shares significant grammatical logic with Sanskrit and Hindi (both feature gendered nouns and grammatical cases). With Gaurav's structured explanation of sentence mechanics, Indian students often find German cases very intuitive.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german", "b1-german"],
+    relatedCourses: ["a1", "a2", "b1"],
     relatedArticles: ["how-much-german-do-you-need-to-work-in-germany", "german-language-levels-explained-a1-to-c2"],
   },
   {
@@ -445,7 +445,7 @@ Each module carries 25 points, making 100 points maximum. To pass the Goethe-Zer
           "Goethe-Institut exam seats across India (Max Mueller Bhavan Pune, Mumbai, Delhi, Bengaluru, Chennai) fill up within minutes of opening. We recommend booking your slot 4 to 6 weeks before your intended exam date.",
       },
     ],
-    relatedCourses: ["a1-german"],
+    relatedCourses: ["a1"],
     relatedArticles: ["german-language-levels-explained-a1-to-c2", "how-long-does-it-take-to-reach-b1-level"],
   },
   {
@@ -597,7 +597,7 @@ Your required level depends on your official objective:
    * While universities accept IELTS/TOEFL for English-taught degrees, daily life in student dorms, grocery shopping, registration at the *Bürgeramt*, and landing a working student job (*Werkstudent*) realistically require **Level A2**.
 
 4. **Direct Employment in German Industry (IT, Engineering, Healthcare):**
-   * A1 is insufficient for professional work. A2 is the absolute foundation required before entering [B1 German](/courses/b1-german), which is the standard benchmark for professional integration and EU Blue Card fast-track permanent residency (Niederlassungserlaubnis in 21 months).
+   * A1 is insufficient for professional work. A2 is the absolute foundation required before entering [B1 German](/courses/b1), which is the standard benchmark for professional integration and EU Blue Card fast-track permanent residency (Niederlassungserlaubnis in 21 months).
 
 ## Can You Skip A1 and Join A2 Directly? (5-Point Self-Assessment)
 
@@ -610,7 +610,7 @@ Take Gaurav's 5-point self-diagnostic test:
 4. **Can you write a coherent 30-word email introducing yourself, stating your hobby, and asking for an appointment?**
 5. **Can you understand spoken German numbers up to 1,000, telephone numbers, and time formats (*Viertel vor, halb*)?**
 
-> **The Verdict:** If you can comfortably answer "YES" to all five questions, you are ready to join our [A2 German Course](/courses/a2-german). If you hesitated on verb conjugations or case endings, starting with A2 will cause confusion when Dative and two-way prepositions are introduced. Taking a focused [A1 German Course](/courses/a1-german) first builds the muscle memory needed to breeze through A2.
+> **The Verdict:** If you can comfortably answer "YES" to all five questions, you are ready to join our [A2 German Course](/courses/a2). If you hesitated on verb conjugations or case endings, starting with A2 will cause confusion when Dative and two-way prepositions are introduced. Taking a focused [A1 German Course](/courses/a1) first builds the muscle memory needed to breeze through A2.
 
 ## Timeline: How Long Does It Take to Move from A1 to A2?
 
@@ -630,7 +630,7 @@ At **German With Gaurav**, every course is structured around three non-negotiabl
 2. **Conceptual Clarity Over Rote Memorization:** Gaurav explains German sentence mechanics using intuitive logical frameworks that resonate with Indian language speakers (Hindi/Sanskrit case parallels).
 3. **Goethe Exam Pattern Training from Week 1:** Every grammar concept is reinforced with actual exam-style listening audios, letter templates, and paired speaking simulations.
 
-Ready to see how our teaching method works? [Book a Free 1-on-1 Demo Session with Gaurav](/book-a-free-demo) to get your personalized level evaluation and study plan.
+Ready to see how our teaching method works? [Book a Free 1-on-1 Demo Session with Gaurav](/book-demo) to get your personalized level evaluation and study plan.
     `,
     keyTakeaways: [
       "A1 provides survival language (80–100 hours); A2 delivers conversational independence (100–120 hours).",
@@ -671,7 +671,7 @@ Ready to see how our teaching method works? [Book a Free 1-on-1 Demo Session wit
           "In our small batches (5–7 students) meeting 4 to 5 times per week, each level takes between 8 to 10 weeks. Most students comfortably complete both A1 and A2 in approximately 4 to 5 months of consistent study.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german", "b1-german"],
+    relatedCourses: ["a1", "a2", "b1"],
     relatedArticles: ["beginners-guide-to-german-cases", "how-long-does-it-take-to-reach-b1-level", "german-language-levels-explained-a1-to-c2"],
   },
   {
@@ -780,7 +780,7 @@ The Genitive case shows **possession or relationship**, equivalent to English *"
           "German has fixed prepositions (some always take Accusative, some always take Dative) and two-way prepositions (Wechselpräpositionen like in, an, auf) which take Accusative for movement/destination and Dative for static position/location.",
       },
     ],
-    relatedCourses: ["a1-german", "a2-german"],
+    relatedCourses: ["a1", "a2"],
     relatedArticles: ["a1-vs-a2-german-level", "german-language-levels-explained-a1-to-c2"],
   },
 ];

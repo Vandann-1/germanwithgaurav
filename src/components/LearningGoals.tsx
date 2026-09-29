@@ -1,100 +1,84 @@
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, Briefcase, GraduationCap, Award, ArrowRight } from "lucide-react";
-
-const goals = [
-  {
-    icon: MessageCircle,
-    title: "Everyday German",
-    description:
-      "Feel completely natural in everyday conversations, supermarket trips, ordering at restaurants, talking with neighbours, and handling daily life in Germany, Austria, or Switzerland.",
-    cta: "Explore Everyday German",
-    href: "/courses/a1-german",
-    tag: "A1–A2 General",
-  },
-  {
-    icon: Briefcase,
-    title: "Professional German",
-    description:
-      "Accelerate your career in Europe's strongest economy. Communicate effectively with German colleagues, master workplace correspondence, pass corporate interviews, and unlock higher salaries.",
-    cta: "Explore Career German",
-    href: "/courses/b1-german",
-    tag: "B1 Business Focus",
-  },
-  {
-    icon: GraduationCap,
-    title: "Study in Germany",
-    description:
-      "Access tuition-free degrees at world-class German public universities. Master the linguistic prerequisites for student visas, Studienkolleg, university applications, and working student roles.",
-    cta: "Explore Academic Pathway",
-    href: "/learn-german",
-    tag: "University Roadmap",
-  },
-  {
-    icon: Award,
-    title: "Goethe Exam Preparation",
-    description:
-      "Targeted training for the Goethe-Zertifikat (A1, A2, B1) and official visa requirements. Learn test blueprints, time-management strategies, letter templates, and oral presentation tactics.",
-    cta: "Explore Exam Training",
-    href: "/courses",
-    tag: "100% Goethe Aligned",
-  },
-];
+import Image from "next/image";
+import { ArrowRight, Clock, Target } from "lucide-react";
+import { learningPathsData } from "@/data/learningPathsData";
 
 export function LearningGoals() {
   return (
-    <section className="py-16 sm:py-24 bg-white border-b border-slate-100">
+    <section className="py-16 sm:py-24 bg-white border-b border-[#e5e2da]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Heading */}
+        {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
-            Tailored Pathways
+          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#b91c1c]">
+            TAILORED ROADMAPS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            What are you learning German for?
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#121826] tracking-tight">
+            Learning Paths Designed for Your Goal
           </h2>
-          <p className="text-base sm:text-lg text-slate-600">
-            Select your primary goal to discover the exact course curriculum and milestones built for your journey.
+          <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+            Whether preparing for a career in Germany, pursuing higher studies, or passing official Goethe examinations, select your focused pathway.
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 4 Cards Grid with Real Photography */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {goals.map((item, idx) => {
-            const Icon = item.icon;
+          {learningPathsData.map((path) => {
             return (
               <div
-                key={idx}
-                className="flex flex-col justify-between bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-200 group"
+                key={path.slug}
+                className="flex flex-col justify-between bg-[#faf9f6] rounded-2xl overflow-hidden border border-[#e5e2da] hover:border-[#b91c1c]/50 hover:bg-white hover:shadow-lg transition-all group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded">
-                      {item.tag}
+                  {/* Real Atmospheric Image Header */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-200">
+                    <Image
+                      src={path.image}
+                      alt={path.imageAlt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <span className="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-wider text-white bg-[#121826]/85 backdrop-blur-xs px-2.5 py-1 rounded-md border border-white/20">
+                      {path.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">
-                    {item.title}
-                  </h3>
+                  {/* Body Content */}
+                  <div className="p-5 sm:p-6 space-y-3">
+                    <h3 className="text-lg font-bold text-[#121826] group-hover:text-[#b91c1c] transition-colors leading-snug">
+                      {path.title}
+                    </h3>
 
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    {item.description}
-                  </p>
+                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed line-clamp-3">
+                      {path.subtitle}
+                    </p>
+
+                    <div className="pt-3 border-t border-[#e5e2da] text-xs text-[#64748b] space-y-1.5">
+                      <div className="flex items-center gap-1.5">
+                        <Target className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span><strong className="text-[#121826]">Target:</strong> {path.targetLevel}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span><strong className="text-[#121826]">Duration:</strong> {path.duration.split("(")[0].trim()}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-100">
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors"
-                  >
-                    <span>{item.cta}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                <div className="p-5 sm:p-6 pt-0">
+                  <div className="pt-4 border-t border-[#e5e2da]">
+                    <Link
+                      href={`/learning-paths/${path.slug}`}
+                      className="inline-flex items-center justify-between w-full text-xs font-bold text-[#121826] group-hover:text-[#b91c1c] transition-colors uppercase tracking-wider"
+                    >
+                      <span>Explore Roadmap</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             );
